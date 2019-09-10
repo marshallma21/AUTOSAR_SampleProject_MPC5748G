@@ -1,0 +1,1 @@
+call launch.bat TOOLCHAIN=diab

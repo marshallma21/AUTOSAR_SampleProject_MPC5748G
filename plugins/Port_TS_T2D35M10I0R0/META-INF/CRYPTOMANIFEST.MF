@@ -1,0 +1,92 @@
+
+Name: generate_PB/Calypso_Resource_3M.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377420662602233458250214600647062998844351561758181872
+ 8597197395514462289127200838383286257412357796303345
+
+Name: generate_PC/src/Port_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773970042101219755595480046608101686895664234828289
+ 294447762081356849950962709865792055780754571591900919
+
+Name: generate_PB/src/Port_PBcfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377422029564101719462024812069396971587623021371479821
+ 8923799777810822622307640097962184999466576785249164
+
+Name: generate_PC/include/Port_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423668213147894590822226283301880094091368354894928
+ 4882015647578246253076705070466361231558434439084801
+
+Name: generate_PB/Calypso_Resource_6M.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377421187521390392584055345299604294629525465722913374
+ 8803783800189669801001079214172767459961338753668582
+
+Name: generate_PC/Calypso_Resource_3M.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423906724540467647086588540531056497839996497284996
+ 9430718532195497002257514344678084850185459334345669
+
+Name: generate_PB/Port_VersionCheck_Src_PB.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377422047390938864772404185971834629777396240643402221
+ 3904697636211721481378090124055254935240166351219591
+
+Name: config/Port.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423290624149127472851704292178619691278286676048315
+ 6955101034807196971574458544496856428488746433018829
+
+Name: generate_PC/Port_VersionCheck_Inc.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377420454931757218140243291446920902237895861608278943
+ 9602210138222811521737576872756706012517481657103278
+
+Name: generate_PC/Calypso_Resource.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377427009194337241476090023866430207953594754716089126
+ 7997000378415896441430080453154184692431570466283137
+
+Name: generate_PC/Calypso_Resource_6M.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426105898169218694160146389153062945482171911492194
+ 0880121555114226833030539975209574062550715615490765
+
+Name: generate_PC/Port_VersionCheck_Src.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377425856258182471170044560395946062673706110265604346
+ 9274194725273925548456709598004747964827109062517897
+
+Name: generate_PB/Calypso_Resource.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426170535650638657349869607448812969458079274860536
+ 1211073818613816833430558775551012722491199988151226
+

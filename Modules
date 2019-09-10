@@ -1,0 +1,33 @@
+#===================================================================================================
+#
+#    @file        Modules
+#    @version     1.0.0
+#
+#    @brief       AUTOSAR - Sample_app - list of modules to be built.
+#    @details     List of AutoSar modules that will be compiled and linked into the Sample_app.
+#
+#    Project      : AUTOSAR 4.2 MCAL
+#    Platform     : PA
+#    Peripheral   : 
+#    Dependencies : Base Det Dem Port Dio Mcu Rte Wdg WdgIf CanIf LinIf FrIf EcuM
+#
+#    Autosar Version       : 4.2.2
+#    Autosar Revision      : ASR_REL_4_2_REV_0002
+#    Autosar Conf. Variant :
+#    Software Version      : 1.0.0
+#    Build Version         : MPC574XG_MCAL_1_0_0_RTM_ASR_REL_4_2_REV_0002_20171702
+#
+#    (c) Copyright 2006-2017 NXP Inc
+#    All Rights Reserved.
+#
+#    This file contains sample code only. It is not part of the production code deliverables.
+#
+#===================================================================================================
+##===================================================================================================
+
+# specify modules which will be compiled and linked
+MODULE_LIST :=  Base Dio Gpt Mcl Mcu Port Rte
+
+APP_BSW_LIST := IoDal SysDal
+
+APP_SWC_LIST := Actuators Lighting Rte Sensors	

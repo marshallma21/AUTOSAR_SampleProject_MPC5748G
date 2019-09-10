@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3_STRICT_COMPACT.xsd">
+  
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Dio</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>Dio</SHORT-NAME>
+              <MODULE-ID>120</MODULE-ID>
+              <PROVIDED-ENTRYS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_FlipChannel</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_MaskedWritePort</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ReadChannel</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ReadChannelGroup</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ReadPort</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidateChannelForRead</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidateChannelForWrite</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidateChannelGroupForRead</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidateChannelGroupForWrite</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidateChannelLevel</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidatePortForRead</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidatePortForWrite</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_WriteChannel</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_WriteChannelGroup</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_WritePort</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_Init</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </PROVIDED-ENTRYS>
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>InternalBehavior_0</SHORT-NAME>
+                  <EXCLUSIVE-AREAS>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>DIO_EXCLUSIVE_AREA_00</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>DIO_EXCLUSIVE_AREA_01</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                  </EXCLUSIVE-AREAS>
+                  <ENTITYS>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Dio_FlipChannel</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_FlipChannel</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Dio_GetVersionInfo</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Dio_MaskedWritePort</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_MaskedWritePort</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Dio_ReadChannel</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ReadChannel</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Dio_ReadChannelGroup</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ReadChannelGroup</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Dio_ReadPort</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ReadPort</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Dio_ValidateChannelForRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidateChannelForRead</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Dio_ValidateChannelForWrite</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidateChannelForWrite</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Dio_ValidateChannelGroupForRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidateChannelGroupForRead</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Dio_ValidateChannelGroupForWrite</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidateChannelGroupForWrite</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Dio_ValidateChannelLevel</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidateChannelLevel</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Dio_ValidatePortForRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidatePortForRead</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Dio_ValidatePortForWrite</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_ValidatePortForWrite</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Dio_WriteChannel</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_WriteChannel</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Dio_WriteChannelGroup</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_WriteChannelGroup</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Dio_WritePort</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_WritePort</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Dio_Init</SHORT-NAME>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Dio/BswModuleDescriptions/Dio/InternalBehavior_0/DIO_EXCLUSIVE_AREA_00</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Dio/BswModuleDescriptions/Dio/InternalBehavior_0/DIO_EXCLUSIVE_AREA_01</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dio/BswModuleEntrys/Dio_Init</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                  </ENTITYS>
+                </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+                      
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+          <ELEMENTS>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_FlipChannel</SHORT-NAME>
+                <SERVICE-ID>0x11</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_GetVersionInfo</SHORT-NAME>
+                <SERVICE-ID>0x12</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_MaskedWritePort</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_ReadChannel</SHORT-NAME>
+                <SERVICE-ID>0x00</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_ReadChannelGroup</SHORT-NAME>
+                <SERVICE-ID>0x04</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_ReadPort</SHORT-NAME>
+                <SERVICE-ID>0x02</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_ValidateChannelForRead</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_ValidateChannelForWrite</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_ValidateChannelGroupForRead</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_ValidateChannelGroupForWrite</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_ValidateChannelLevel</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_ValidatePortForRead</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_ValidatePortForWrite</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_WriteChannel</SHORT-NAME>
+                <SERVICE-ID>0x01</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_WriteChannelGroup</SHORT-NAME>
+                <SERVICE-ID>0x05</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_WritePort</SHORT-NAME>
+                <SERVICE-ID>0x03</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Dio_Init</SHORT-NAME>
+                <SERVICE-ID>0x10</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>Dio_T2D35M10I0R0</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+        <SHORT-NAME>Implementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+              <SHORT-NAME>BswImplementation_0</SHORT-NAME>
+
+            <CODE-DESCRIPTORS>
+              <CODE>
+              <SHORT-NAME>Files</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>config::Dio.xdm</SHORT-LABEL>
+                  <CATEGORY>SWCFG</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>doc::AUTOSAR_MCAL_DIO_IM.pdf</SHORT-LABEL>
+                  <CATEGORY>SWDOC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>doc::AUTOSAR_MCAL_DIO_UM.pdf</SHORT-LABEL>
+                  <CATEGORY>SWDOC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>include::Dio.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>include::Dio_EnvCfg.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>include::Dio_Ipw.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>include::Dio_Reg_eSys_Siul2.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>include::Dio_Siul2.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>include::Siul2_IpVersion.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>src::Dio.c</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>src::Dio_Siul2.c</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+              </CODE>
+            </CODE-DESCRIPTORS>
+
+            <COMPILERS>
+              <COMPILER>
+                <SHORT-NAME>DIAB_Compiler</SHORT-NAME>
+                <NAME>Windriver Diab</NAME>
+                <OPTIONS>-tPPCE200Z4204N3VEN:simple -tPPCE200Z210N3VEN:simple -Xdialect-ansi -XO -g3 -Xsize-opt -Xsmall-data=0 -Xsmall-const=0 -Xaddr-sconst=0x11 -Xaddr-sdata=0x11 -Xno-common -Xnested-interrupts -Xdebug-dwarf2 -Xdebug-local-all -Xdebug-local-cie -Xdebug-struct-all -Xforce-declarations -ee1481 -Xmacro-undefined-warn -Xlink-time-lint -W:as:,-l  -Wa,-Xisa-vle -DAUTOSAR_OS_NOT_USED -DUSE_SW_VECTOR_MODE -DDIAB -DDISABLE_MCAL_INTERMODULE_ASR_CHECK -c</OPTIONS>
+                <VENDOR>Windriver</VENDOR>
+                <VERSION>Windriver DIAB DIAB_5_9_6_2</VERSION>
+              </COMPILER>
+              <COMPILER>
+                <SHORT-NAME>GHS_Compiler</SHORT-NAME>
+                <NAME>Green Hills</NAME>
+                <OPTIONS>-cpu=ppc5748gz4204 -cpu=ppc5748gz210 -ansi -noSPE -Ospace -sda=0 -vle -dual_debug -G --no_exceptions -Wundef -Wimplicit-int -Wshadow -Wtrigraphs --prototype_errors --incorrect_pragma_warnings -noslashcomment -preprocess_assembly_files -nostartfile --short_enum --diag_error 223 -DAUTOSAR_OS_NOT_USED -DUSE_SW_VECTOR_MODE -DDISABLE_MCAL_INTERMODULE_ASR_CHECK -DGHS -c</OPTIONS>
+                <VENDOR>Green Hills</VENDOR>
+                <VERSION>Green Hills Multi 7.1.4 / Compiler 2015.1.6</VERSION>
+              </COMPILER>
+            </COMPILERS>
+            <GENERATED-ARTIFACTS>
+              <DEPENDENCY-ON-ARTIFACT>
+                <SHORT-NAME>Dio_Cfg_h</SHORT-NAME>
+                <ARTIFACT-DESCRIPTOR>
+                  <SHORT-LABEL>generate_PC::include::Dio_Cfg.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </ARTIFACT-DESCRIPTOR>
+                <USAGES>
+                  <USAGE>COMPILE</USAGE>
+                </USAGES>
+              </DEPENDENCY-ON-ARTIFACT>
+              <DEPENDENCY-ON-ARTIFACT>
+                <SHORT-NAME>Dio_Cfg_c</SHORT-NAME>
+                <ARTIFACT-DESCRIPTOR>
+                  <SHORT-LABEL>generate_PC::src::Dio_Cfg.c</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </ARTIFACT-DESCRIPTOR>
+                <USAGES>
+                  <USAGE>COMPILE</USAGE>
+                </USAGES>
+              </DEPENDENCY-ON-ARTIFACT>
+            </GENERATED-ARTIFACTS>
+
+            <LINKERS>
+              <LINKER>
+                <SHORT-NAME>DIAB_Linker</SHORT-NAME>
+                <NAME>Windriver Diab</NAME>
+                <OPTIONS>-tPPCE200Z4204N3VEN:simple -tPPCE200Z210N3VEN:simple -Xelf -m6 -Xlink-time-lint</OPTIONS>
+                <VENDOR>Windriver</VENDOR>
+                <VERSION>Windriver DIAB DIAB_5_9_6_2</VERSION>
+              </LINKER>
+              <LINKER>
+                <SHORT-NAME>GHS_Linker</SHORT-NAME>
+                <NAME>Green Hills</NAME>
+                <OPTIONS>-cpu=ppc5748gz4204  -cpu=ppc5748gz210  -nostartfiles -vle --nocpp -Mn -delete -ignore_debug_references -keepmap</OPTIONS>
+                <VENDOR>Green Hills</VENDOR>
+                <VERSION>Green Hills Multi 7.1.4 / Compiler 2015.1.6</VERSION>
+              </LINKER>
+            </LINKERS> 
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION>
+                <SHORT-NAME>ResourceConsumption</SHORT-NAME>
+                <MEMORY-SECTIONS>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>DIO_CODE</SHORT-NAME>
+                    <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR/MemMap/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CODE</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>DIO_CONFIG_DATA_UNSPECIFIED</SHORT-NAME>
+                    <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR/MemMap/SwAddrMethods/CONFIG_DATA_UNSPECIFIED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CONFIG_DATA_UNSPECIFIED</SYMBOL>
+                  </MEMORY-SECTION>
+                </MEMORY-SECTIONS>
+              </RESOURCE-CONSUMPTION>
+              <SW-VERSION>1.0.0</SW-VERSION>
+              <VENDOR-ID>43</VENDOR-ID>
+              <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+              
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Dio/BswModuleDescriptions/Dio/InternalBehavior_0</BEHAVIOR-REF>
+              <PRECONFIGURED-CONFIGURATION-REFS>
+              </PRECONFIGURED-CONFIGURATION-REFS>
+              <RECOMMENDED-CONFIGURATION-REFS>
+              </RECOMMENDED-CONFIGURATION-REFS>
+              <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/TS_T2D35M10I0R0/Dio</VENDOR-SPECIFIC-MODULE-DEF-REF>
+              </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,57 @@
+
+Name: generate_PC/include/Fr_DeviceMacros.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377425701881729435569089497703533105850188291919597689
+ 3146582245635018428926480680632750513657902578458765
+
+Name: config/Fr.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423685797750520894362147204556151734433085408556416
+ 5103556970864236589778139231140482913575888461490018
+
+Name: generate_PB/src/Fr_DeviceMacros.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377421657664700541473675415032065027926373590808835228
+ 1980530972516659649002898514826894452593378999374526
+
+Name: generate_PB/src/Fr_VersionCheck.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 44189296914832873114250961083125837937473496186541825668357
+ 2135928183554740101468780351140565794701124719836
+
+Name: generate_PB/src/Fr_PBcfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426353319747788977959337380422261591759997629282555
+ 7210453520294609760422365191739280062027557365264138
+
+Name: generate_PB/src/Fr_SpecChecks.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377420658442243512629680370492958708668652293189110142
+ 0164813601104922949680968794214724917473225338549493
+
+Name: generate_PC/include/Fr_VersionCheck.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377422967797319053068803368361931444357803681102213308
+ 2473686599624974925378708418683347043523197533670146
+
+Name: generate_PC/include/Fr_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377421241953928045777947757961744669277078389606015189
+ 0569293700494735252820873352299941186103813573641010
+

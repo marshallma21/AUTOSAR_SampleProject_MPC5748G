@@ -1,0 +1,1963 @@
+<?xml version='1.0'?>
+<datamodel version="3.0"
+           xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd"
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd"
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd"
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+<!--
+*   @file    Pwm.xdm
+*   @version 1.0.0
+*
+*   @brief   AUTOSAR Pwm - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and Pwm Tresos Studio plugin.
+-->
+<!--
+====================================================================================================
+*   Project              : AUTOSAR 4.2 MCAL
+*   Platform             : PA
+*   Peripheral           : eMios
+*   Dependencies         : none
+*
+*   Autosar Version      : 4.2.2
+*   Autosar Revision     : ASR_REL_4_2_REV_0002
+*   Autosar Conf.Variant :
+*   SW Version           : 1.0.0
+*   Build Version        : MPC574XG_MCAL_1_0_0_RTM_ASR_REL_4_2_REV_0002_20170217
+
+
+*   (c) Copyright 2006-2016 Freescale Semiconductor, Inc. 
+*       Copyright 2017 NXP
+*   All Rights Reserved.
+====================================================================================================
+====================================================================================================
+====================================================================================================
+-->               
+  <d:ctr type="AUTOSAR" 
+         factory="autosar"  
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd"
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd">
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="TS_T2D35M10I0R0" type="AR-PACKAGE">
+        <a:a name="UUID" value="ECUC:9593732e-98f2-49bd-98f3-f9692974f313"/>
+        <d:lst type="ELEMENTS">
+
+          <d:chc name="Pwm" type="AR-ELEMENT" value="MODULE-DEF">
+          
+            <v:ctr type="MODULE-DEF">
+              
+              <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                 <ad:ADMIN-DATA>
+                    <ad:LANGUAGE>EN</ad:LANGUAGE>
+                    <ad:DOC-REVISIONS>
+                        <ad:DOC-REVISION>
+                            <ad:REVISION-LABEL>1.0.0</ad:REVISION-LABEL>
+                            <ad:ISSUED-BY>NXP</ad:ISSUED-BY>
+                            <ad:DATE>2010-12-03</ad:DATE>
+                        </ad:DOC-REVISION>
+                    </ad:DOC-REVISIONS>
+                 </ad:ADMIN-DATA>
+              </a:a>
+
+              <a:a name="RELEASE" value="asc:4.2"/>
+
+              <a:a name="DESC" value="EN: Configuration of Pwm (Pulse Width Modulation) module."/>
+              <a:a name="UUID" value="ECUC:24c0e383-400c-4a4f-b3ef-3f2790b17de5"/>
+              <d:ref type="REFINED_MODULE_DEF" value="ASPath:/AUTOSAR/EcucDefs/Pwm"/>
+
+              <!-- @implements IMPLEMENTATION_CONFIG_VARIANT_Object -->
+              <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                    <a:a name="LABEL" value="Config Variant"/>
+                                    <a:a name="UUID" value="ECUC:d6d5ff45-50ee-4491-8dc8-f088569deb95"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>
+                                            VariantPreCompile: Only precompile time configuration parameters. Only one set of parameters.
+                                            VariantPostBuild: Mix of precompile and postbuild time configuration parameters. Only one set of parameters.
+                                            If Config Variant = VariantPreCompile, the files  Port_Cfg.h and Port_Cfg.c should be used.
+                                            If Config Variant = VariantPostBuild, the files Port_Cfg.h and Port_PBcfg.c should be used.
+                                            </p>
+                                            </html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                         <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                         <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:da name="DEFAULT" value="VariantPostBuild"/>
+                    <a:da name="RANGE">
+                        <a:v>VariantPostBuild</a:v>
+                        <a:v>VariantPreCompile</a:v>
+                    </a:da>
+                </v:var>
+                
+              <!-- @implements PwmConfigurationOfOptApiServices_Object -->
+              <v:ctr name="PwmConfigurationOfOptApiServices" type="IDENTIFIABLE">
+                <a:a name="UUID" value="ECUC:ca380451-d9a6-4ca7-b7c3-3fdf6632a31f"/>
+                <a:a name="DESC">
+                     <a:v><![CDATA[EN:
+                          <html>
+PwmConfigurationOfOptApiServices
+                                     Container used for storing the configuration of all optional API's.
+                                     Autosar Requirements: not specified.
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                <!-- @implements PwmDeInitApi_Object -->
+                <v:var name="PwmDeInitApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                          <html>
+Adds / removes the service Pwm_DeInit() from the code.
+                          </html> ]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:2ee2dca7-4f62-4ade-8891-abf6013ba017"/>
+                 <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- @implements PwmGetOutputState_Object -->
+                <v:var name="PwmGetOutputState" type="BOOLEAN">
+                  <a:a name="DESC">
+                   <a:v><![CDATA[EN:
+                          <html>
+Adds / removes the service Pwm_GetOutputState () from the code.<p></p>
+In the current implementation this API does <b>NOT</b> reflect the state of the Pwm output signal
+and the returned value is always PWM_LOW.
+                          </html> ]]>
+                   </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:c2bacc1a-d11b-46b3-8ae4-3515595b08c0"/>
+                  <!-- /** default value set to false due to HW limitation */ -->
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+                <!-- @implements PwmSetDutyCycle_Object -->
+                <v:var name="PwmSetDutyCycle" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Adds / removes the service Pwm_SetDutyCycle() from the code.
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:4a7c9b84-fff6-4ee1-bbd5-b7e1093c7b12"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- @implements PwmSetOutputToIdle_Object -->
+                <v:var name="PwmSetOutputToIdle" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Adds / removes the service Pwm_SetOutputToIdle () from the code.
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:09ee7f24-d804-49c3-a053-ec1c98e4295b"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- @implements PwmSetPeriodAndDuty_Object -->  
+                <v:var name="PwmSetPeriodAndDuty" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Adds / removes the service Pwm_SetPeriodAndDuty () from the code.
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:2584fee2-e3d6-4667-a737-fd88ed11a3d5"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- @implements PwmVersionInfoApi_Object -->
+                <v:var name="PwmVersionInfoApi" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch to indicate that the Pwm_GetVersionInfo is supported
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:34334c0e-86a8-4a32-811f-b3046183a691"/>
+                  <a:da name="DEFAULT" value="true"/>     
+                </v:var>
+
+                <!-- @implements PwmGetChannelStateApi_Object -->
+                <v:var name="PwmGetChannelStateApi" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch to indicate that the Pwm_GetChannelState is supported
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:2827dbb9-13e0-416b-a55d-c4d954296c9b"/>
+                  <a:da name="DEFAULT" value="false"/>     
+                </v:var>
+                
+                <!-- @implements MultiPwmChannelSynch_Object -->
+                <v:var name="MultiPwmChannelSynch" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch to indicate that the MultiPwmChannelSynch API is supported
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:d10b7bbf-50f7-4aae-a374-1b91494b9b6b"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+                
+                <!-- @implements PwmSetCounterBusApi_Object --> 
+                <v:var name="PwmSetCounterBusApi" type="BOOLEAN">
+                  <a:a name="LABEL" value="PwmSetCounterBusApi"/>
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch to indicate that the Pwm_SetCounterBus API is supported
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:5097e31a-82fc-4cb4-8f0f-2b7f13a2f8a2"/>
+                  <a:da name="DEFAULT" value="false"/>     
+                </v:var>
+                
+                <!-- @implements PwmSetChannelOutputApi_Object --> 
+                <v:var name="PwmSetChannelOutputApi" type="BOOLEAN">
+                  <a:a name="LABEL" value="PwmSetChannelOutputApi"/>
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch to indicate that the Pwm_SetChannelOutput API is supported
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:83c7f681-a688-4335-b597-bbbf38c7bcaf"/>
+                  <a:da name="DEFAULT" value="false"/>     
+                </v:var>
+                
+                <!-- @implements PwmSetTriggerDelay_Object --> 
+                <v:var name="PwmSetTriggerDelayApi" type="BOOLEAN">
+                  <a:a name="LABEL" value="PwmSetTriggerDelayApi"/>
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch to indicate that the PwmSetTriggerDelay API is supported. This function is called when the prescaler value needs to be change to maintain same period at different frequency.
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS"  type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:175051ce-bd7a-434f-b732-344127d92c85"/>
+                  <a:da name="DEFAULT" value="false"/>     
+                </v:var>
+              </v:ctr>                
+              
+              <!-- @implements PwmChannelConfigSet_Object -->
+                <v:ctr name="PwmChannelConfigSet" type="IDENTIFIABLE">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                          <html>
+This container contains the Channel configuration parameter of the PWM driver.<p></p>
+This container is a MultipleConfigurationContainer, i.e. this container and its sub-containers exit once per configuration set.<p></p>
+<b>NOTE</b>: "User should configure only ONE instance of PwmChannelConfigSet container and not MULTIPLE."
+                          </html> ]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="UUID" value="ECUC:d000afbe-3f40-47c0-8f56-f443fde1d6f3"/>
+
+                  <!-- @implements PwmChannel_Object -->
+                  <v:lst name="PwmChannel" type="MAP">
+                    <a:da name="MIN" value="1"/>
+                    
+                    <v:ctr name="PwmChannel" type="IDENTIFIABLE">
+                      <a:a name="DESC"  value="EN: Configuration of an individual PWM channel."/>
+                      <a:a name="UUID"  value="ECUC:57e79c35-8480-4152-9c3a-23759f1cafc8"/>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                         <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                         <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      
+                      <!-- @implements PwmChannelId_Object -->
+                      <v:var name="PwmChannelId" type="INTEGER">
+                        <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Channel Id of the PWM channel. This value will be assigned to the symbolic name derived of the PwmChannel container short name.
+                          </html> ]]>
+                          </a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                        </a:a>
+
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                        <a:a name="UUID" value="ECUC:3f1f9a49-a02b-48e4-ab5e-e52a4c4715af"/>
+                        <a:da name="DEFAULT" type="XPath" expr="node:fallback(node:current()/../@index,'0')"/>
+                        <a:a name="INVALID" type="Multi">
+                            <mt:range>
+                                <mt:tst expr="&lt;=4294967295"/>
+                                <mt:tst expr="&gt;=0"/>
+                            </mt:range>
+                            <mt:xpath>
+                                <mt:tst expr="text:uniq(../../*/PwmChannelId, .)" false="Duplicate id of PWM Channel; each PWM Channels must have an unique Id value"/>
+                                <mt:tst expr="node:fallback(., 0) &lt; count(node:fallback(../../*, text:split('1 2 3')))" false="It can't be assigned an id higher than the number of defined channels"/>
+                            </mt:xpath>
+                        </a:a>
+                      </v:var>
+
+                      <v:var name="PwmHwIP" type="ENUMERATION">
+                        <a:a name="LABEL" value="Pwm Hw IP"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                          <html>
+Hardware IP to be used for current PWM channel
+eMios  - eMios Hardware IP will be used. Please select an eMios configured channel from eMiosChannel combo below
+                          </html> ]]>
+                          </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:fb89dcdf-62b8-4a3d-9e0b-2b30f7068c77"/>
+                        <a:da name="DEFAULT" value="eMios"/>
+                        <a:da name="RANGE">
+                          <a:v>eMios</a:v>
+                        </a:da>
+                      </v:var>
+
+                      <v:ref name="PwmeMiosChannel" type="REFERENCE">
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                          <html>
+Select the eMios channel on which the functionality of the current PWM channel will be implemented
+                          </html> ]]>
+                          </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="UUID" value="ECUC:d1dd5beb-0087-47c8-a268-497ba3e0d2f3"/>
+
+                        <a:da name="EDITABLE" type="XPath" expr="contains(../PwmHwIP,'eMios') " />
+                        <a:da name="INVALID" type="XPath">
+                            <a:tst expr="
+                                node:value(../PwmHwIP) = 'eMios' and not(node:refexists(.))"
+                                true="Invalid value of the eMios channel. Please select a valid eMios channel from list of already configured eMios channels. If list is empty, 
+please configure an eMios channel first by browsing in the tabs PwmChannelConfigSet/eMios/eMiosChannels" 
+                            />
+                        </a:da>
+                        <a:da name="REF" 
+                          value="ASPathDataOfSchema:/TS_T2D35M10I0R0/Pwm/PwmChannelConfigSet/PwmeMios/PwmeMiosChannels"/>
+                      </v:ref>
+
+                      <v:var name="PwmPeriodInTicks" type="BOOLEAN">
+                        <a:a name="LABEL" value="PwmPeriodInTicks"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                          <html>
+PwmPeriodInTicks
+By default Period unit is measured in Seconds.
+Enable this check to set Default Period unit in Ticks.
+                          </html> ]]>
+                          </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:1d8052a1-2e09-45e6-8d67-846b3219ac3b"/>
+                        <a:da name="DEFAULT" value="false"/>
+                      </v:var>
+                      
+                      <!-- @implements PwmPeriodDefault_Object -->
+                      <v:var name="PwmPeriodDefault" type="FLOAT">
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                          <html>
+Default period value used at initialization.
+The mesure unit are in ticks.
+Valid values [0, 0xFFFE = 65534]
+                          </html> ]]>
+                          </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:da name="EDITABLE" type="XPath" expr="contains(../PwmHwIP,'eMios')" />
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:718b494d-8c7e-4d10-92a4-af3d778ece71"/>
+                        <a:da name="DEFAULT" type="XPath">
+                            <a:tst expr="(((num:i(number(node:fallback(../PwmPeriodInTicks, 'false') = 'false'))) * 0.001) + ((num:i(number(node:fallback(../PwmPeriodInTicks, 'true') = 'true'))) * 10000))"/>
+                        </a:da>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=65534"/>
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+
+                      <!-- @implements PwmChannelClass_Object -->
+                      <v:var name="PwmChannelClass" type="ENUMERATION">
+                        <a:a name="DESC">
+                            <a:v>EN:Class of PWM Channel. ImplementationType: Pwm_ChannelClassType
+                            </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="OPTIONAL" value="true"/>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:37e2aa58-823a-4e47-9bff-272f26c623d8"/>
+                        
+                        <a:da name="DEFAULT" value="PWM_VARIABLE_PERIOD"/>
+                        <a:a name="INVALID" type="Multi">
+                          <mt:xpath>
+                            <mt:tst expr="node:exists(node:ref(../PwmeMiosChannel)) and
+                                    (. = 'PWM_FIXED_PERIOD_SHIFTED') and
+                                    (
+                                    (node:ref(../PwmeMiosChannel)/PwmModeSelect ='PWM_MODE_OPWMCB_LEAD_DEADTIME_U32') or
+                                    (node:ref(../PwmeMiosChannel)/PwmModeSelect ='PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32') or
+                                    (node:ref(../PwmeMiosChannel)/PwmModeSelect ='PWM_MODE_OPWFMB_U32') or
+                                    (node:ref(../PwmeMiosChannel)/PwmModeSelect ='PWM_MODE_DAOC_U32')
+                                    )"
+                                    true="Invalid Mode selection for selected PWMChannelClass. PWM_FIXED_PERIOD_SHIFTED is only supported for PWM_MODE_OPWMB_U32, PWM_MODE_OPWMT_U32" />
+                          </mt:xpath>
+                          <mt:xpath>
+                            <mt:tst expr="node:exists(node:ref(../PwmeMiosChannel)) and
+                                    (. = 'PWM_VARIABLE_PERIOD') and
+                                    (
+                                    (node:ref(../PwmeMiosChannel)/PwmModeSelect ='PWM_MODE_OPWMB_U32') or
+                                    (node:ref(../PwmeMiosChannel)/PwmModeSelect ='PWM_MODE_OPWMT_U32') or
+                                    (node:ref(../PwmeMiosChannel)/PwmModeSelect ='PWM_MODE_OPWMCB_LEAD_DEADTIME_U32') or
+                                    (node:ref(../PwmeMiosChannel)/PwmModeSelect ='PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32')
+                                    )"
+                                    true="Invalid Mode selection for selected PWMChannelClass. PWM_VARIABLE_PERIOD is not supported for PWM_MODE_OPWMB_U32, PWM_MODE_OPWMT_U32, PWM_MODE_OPWMCB_LEAD_DEADTIME_U32 or PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32" />
+                          </mt:xpath>
+                        </a:a>
+                        <a:da name="RANGE">
+                          <a:v>PWM_FIXED_PERIOD</a:v>
+                          <a:v>PWM_FIXED_PERIOD_SHIFTED</a:v>
+                          <a:v>PWM_VARIABLE_PERIOD</a:v>
+                        </a:da>
+                      </v:var>
+
+                      <!-- @implements PwmPolarity_Object -->
+                      <v:var name="PwmPolarity" type="ENUMERATION">
+                        <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Defines the starting polarity of each PWM channel.
+                          </html> ]]>
+                          </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:ff7e8cbd-e7a0-463c-b4bb-db946b032575"/>
+                        <a:da name="DEFAULT" value="PWM_HIGH"/>
+                          <a:da name="RANGE">
+                            <a:v>PWM_HIGH</a:v>
+                            <a:v>PWM_LOW</a:v>
+                          </a:da>
+                      </v:var>
+
+                      <!-- @implements PwmDutycycleDefault_Object -->
+                      <v:var name="PwmDutycycleDefault" type="INTEGER">
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                          <html>
+Default value for duty cycle used for Initialization
+0, represents 0% 
+0x4000, represents 50%
+0x8000, represents 100%
+                     </html> ]]>
+                          </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:dd06841e-0cf9-468f-adc1-17482a31eb93"/>
+                        <a:da name="DEFAULT" value="16384"/>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=32768"/>
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+
+                      <!-- @implements PwmIdleState_Object -->
+                      <v:var name="PwmIdleState" type="ENUMERATION">
+                        <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+This parameter represents the state of the Pin when the output is set to Idle.
+                          </html> ]]>
+                          </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:5942cd6a-6945-4d68-b05b-dd253bc183af"/>
+                        <a:da name="DEFAULT" value="PWM_LOW"/>
+                        <a:da name="RANGE">
+                          <a:v>PWM_HIGH</a:v>
+                          <a:v>PWM_LOW</a:v>
+                        </a:da>
+                      </v:var>]
+
+                      <!-- @implements PwmNotification_Object -->
+                      <v:var name="PwmNotification" type="FUNCTION-NAME">
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                          <html>
+User callback function
+NOTE: please use NULL or NULL_PTR w/o any quotes. If the used string is different from NULL
+or NULL_PTR it will be used as the configured function name.
+                          </html> ]]>
+                          </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/> 
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:6b3ee924-43c4-45eb-906e-c70d7cdef216"/>
+                        <a:da name="EDITABLE" type="XPath" expr="node:value(../../../../PwmGeneral/PwmNotificationSupported) = 'true'" />
+                        <a:a name="OPTIONAL" value="true"/>
+                        <a:da name="DEFAULT" value="NULL"/>
+                        <a:da name="INVALID" type="XPath">
+                          <a:tst expr="normalize-space(.) = '&quot;NULL_PTR&quot;' or normalize-space(.) = 'NULL_PTR' or normalize-space(.) = '&quot;NULL&quot;' or normalize-space(.) = 'NULL' or text:match(normalize-space(.),'^[_a-zA-Z]+[_0-9a-zA-Z]*$')"
+                          false="Invalid name of the Pwmnotification. Must be valid C function name, NULL_PTR, &quot;NULL_PTR&quot;, NULL, or &quot;NULL&quot;."/>
+                          <a:tst expr="(node:exists(../../../../PwmGeneral/PwmHwConfiguration/*[
+                                ((text:split(PwmInterruptHwId,'_')[4] = text:split(node:ref(node:current()/../PwmeMiosChannel)/PwmeMiosChannel,'_')[2]) and 
+                                (text:split(PwmInterruptHwId,'_')[2] = text:split(node:ref(node:current()/../PwmeMiosChannel)/../../PwmeMiosModule,'_')[2])) and 
+                                (node:value(PwmInterruptEnable) != 'true')]))  and 
+                                ((. != 'NULL') and (. != 'NULL_PTR'))" 
+                                true="Please go to PwmGeneral/PwmHwConfiguration/*/PwmInterruptEnable and enable interrupt in corresponding channel"/>
+                        </a:da>
+                      </v:var>    
+                      <v:ref name="PwmMcuClockReferencePoint" type="REFERENCE">
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                          <html>
+Reference to the eMios clock source configuration,
+which is set in the MCU driver configuration. <p></p>
+Motor Control Clock configuration in AuxClock0En tab
+is the reference clock for eMios.
+                          </html> ]]>
+                          </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="UUID" value="ECUC:693b1293-2726-4f3d-b6d3-2f35aa00ca62"/>
+                        <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint"/>
+                      </v:ref>
+                      
+                    </v:ctr>
+                  </v:lst>
+
+                  <v:lst name="PwmeMios" type="MAP">
+                    <a:da name="MIN" value="1"/>
+                    <a:da name="MAX" value="3"/>
+                    <v:ctr name="PwmeMios" type="IDENTIFIABLE">
+                      <a:a name="LABEL" value="eMios Modules"/>
+                      <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Configuration of a eMios module available on the platfom.
+                          </html> ]]>
+                          </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                      </a:a>
+                      <a:a name="UUID" value="ECUC:72b13796-cc7f-418c-83d0-dfa2e3cd48d6"/>
+                      <v:var name="PwmeMiosModule" type="ENUMERATION">
+                          <a:a name="LABEL" value="eMios Hardware Module"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                        <html>
+Select the physical eMios Module.
+                        </html> ]]>
+                            </a:v>
+                          </a:a>
+                          <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          </a:a>    
+                          <a:a name="ORIGIN" value="NXP"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                          <a:a name="UUID" value="ECUC:dd286e45-87d3-4c9d-b607-f532d59fea6b"/>
+                          <a:da name="INVALID" type="XPath">
+                            <a:tst expr="text:uniq(../../*/PwmeMiosModule, .)" false="Duplicate physical eMios module"/>
+                          </a:da>
+                          <!--  default value - increment the last channel used -->
+                          <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Pwm.eMios_Hw_Modules'))[position()-1=node:fallback(node:current()/../@index,'0')]">
+                      
+                          </a:da>
+                          <a:da name="RANGE" type="XPath" expr="ecu:list('Pwm.eMios_Hw_Modules')"/>
+                      </v:var>
+                      <v:lst name="PwmeMiosChannels" type="MAP">
+                        <a:da name="MIN" value="1"/>
+                        <a:da name="MAX" value="32"/>
+                        <v:ctr name="PwmeMiosChannels" type="IDENTIFIABLE">
+                          <a:a name="LABEL" value="eMios Channels"/>
+                          <a:a name="DESC"><a:v><![CDATA[EN:
+                        <html>
+List of eMios modules available on the platform.
+                        </html> ]]>
+                              </a:v>
+                          </a:a>
+                          <a:a name="UUID" value="ECUC:dc52cbeb-9157-4843-ac71-418f5b8d09d4"/>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                          </a:a>
+
+                          <v:var name="PwmeMiosChannel" type="ENUMERATION">
+                            <a:a name="LABEL" value="eMios Channel"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Selects one of the eMios channels available on the platform.
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:ee22e77b-45b0-46ca-8a61-07260085aa49"/>
+                            <!--  default value - increment the last channel used -->
+                            <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Pwm.eMios_Hw_Channels'))[position()-1=node:fallback(node:current()/../@index,'0')]">
+                            </a:da>
+                            <a:da name="INVALID" type="XPath">
+                              <a:tst expr="text:uniq(../../*/PwmeMiosChannel, .) and not(node:containsValue(../../PwmeMiosMasterBus/*/PwmeMiosMasterBus, .))" false="Duplicate physical eMios channel"/>
+                              <a:tst expr="(../PwmModeSelect = 'PWM_MODE_OPWFMB_U32') and (../../PwmeMiosModule = 'eMios_0') and (. != 'Channel_0') and (. != 'Channel_8') and (. != 'Channel_16') and (. != 'Channel_22') and (. != 'Channel_23') and (. != 'Channel_24') and (. != 'Channel_1') and (. != 'Channel_2') and (. != 'Channel_3') and (. != 'Channel_4') and (. != 'Channel_5') and (. != 'Channel_6') and (. != 'Channel_7')" true="The selected eMIOS channel does not support PWM_MODE_OPWFMB_U32 mode."/>
+                              <a:tst expr="(../PwmModeSelect = 'PWM_MODE_OPWFMB_U32') and ((../../PwmeMiosModule = 'eMios_1') or (../../PwmeMiosModule = 'eMios_2')) and (. != 'Channel_0') and (. != 'Channel_8') and (. != 'Channel_16') and (. != 'Channel_22') and (. != 'Channel_23') and (. != 'Channel_24')" true="The selected eMIOS channel does not support PWM_MODE_OPWFMB_U32 mode."/>  
+                              <a:tst expr="(../PwmModeSelect = 'PWM_MODE_DAOC_U32') and ((../../PwmeMiosModule = 'eMios_0') or (../../PwmeMiosModule = 'eMios_1')) and (. != 'Channel_1') and (. != 'Channel_2') and (. != 'Channel_3') and (. != 'Channel_4') and (. != 'Channel_5') and (. != 'Channel_6') and (. != 'Channel_7') and (. != 'Channel_9') and (. != 'Channel_10') and (. != 'Channel_11') and (. != 'Channel_12') and (. != 'Channel_13') and (. != 'Channel_14') and (. != 'Channel_15')" true="The selected eMIOS channel does not support PWM_MODE_DAOC_U32 mode."/>
+                              <a:tst expr="(../PwmModeSelect = 'PWM_MODE_DAOC_U32') and (../../PwmeMiosModule = 'eMios_2') " true="The selected eMIOS channel does not support PWM_MODE_DAOC_U32 mode."/>
+                              <a:tst expr="((../PwmModeSelect = 'PWM_MODE_OPWMCB_LEAD_DEADTIME_U32') or (../PwmModeSelect = 'PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32')) and (../../PwmeMiosModule = 'eMios_0') and (. != 'Channel_1') and (. != 'Channel_2') and (. != 'Channel_3') and (. != 'Channel_4') and (. != 'Channel_5') and (. != 'Channel_6') and (. != 'Channel_7') " true="The selected eMIOS channel doesnot support PWM_MODE_OPWMCB_LEAD_DEADTIME_U32/PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32(Center aligned mode) mode."/>
+                              <a:tst expr="((../PwmModeSelect = 'PWM_MODE_OPWMCB_LEAD_DEADTIME_U32') or (../PwmModeSelect = 'PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32')) and ((../../PwmeMiosModule = 'eMios_1') or (../../PwmeMiosModule = 'eMios_2'))" true="The selected eMIOS channel doesnot support PWM_MODE_OPWMCB_LEAD_DEADTIME_U32/PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32(Center aligned mode) mode."/>
+                              <a:tst expr="node:exists(../../../../../../PwmGeneral/PwmHwConfiguration/*[((text:split(PwmInterruptHwId,'_')[4] = text:split(node:current(),'_')[2]) and (text:split(PwmInterruptHwId,'_')[2] = text:split(node:current()/../../../PwmeMiosModule,'_')[2])) and (node:value(PwmChannelIsUsed) = 'true')])" false="please eneble this channel in PwmGeneral/PwmHwConfiguration/PwmChannelIsUsed"/>
+                            </a:da>
+                            <a:da name="RANGE" type="XPath" expr="ecu:list('Pwm.eMios_Hw_Channels')"/>
+                          </v:var>
+
+                          <v:var name="PwmPrescaler" type="ENUMERATION">
+                            <a:a name="LABEL" value="Clock Prescaler"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Select clock prescaler used for this eMios channel. The internal counter must be selected for this setting to take any effect
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                          <!-- /** the prescaler makes sense only when PwmModeSelect is PWM_MODE_OPWFMB_U32 or PWM_MODE_OPWMCB_LEAD_DEADTIME_U32/PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32 or PWM_MODE_DAOC_U32*/  -->
+                          <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:cdd8fbd9-4174-4d40-9f80-a081cfddc77c"/>
+                            <a:da name="RANGE">
+                              <a:v>PwmPrescalerDiv1</a:v>
+                              <a:v>PwmPrescalerDiv2</a:v>
+                              <a:v>PwmPrescalerDiv3</a:v>
+                              <a:v>PwmPrescalerDiv4</a:v>
+                            </a:da>
+                            <a:da name="DEFAULT" value="PwmPrescalerDiv1"/>
+                          </v:var>
+                          
+                          <v:var name="PwmPrescaler_Alternate" type="ENUMERATION">
+                            <a:a name="LABEL" value="Clock Prescaler Alternate"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Select clock prescaler used for this eMios channel. The internal counter must be selected for this setting to take any effect
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:da name="EDITABLE" type="XPath" expr="node:value(../../../../../../PwmGeneral/PwmEnableDualClockMode) = 'true'" />
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:548e57a9-8cd6-4d87-8569-e283e7175c96"/>
+                            <a:da name="RANGE">
+                              <a:v>PwmPrescalerDiv1</a:v>
+                              <a:v>PwmPrescalerDiv2</a:v>
+                              <a:v>PwmPrescalerDiv3</a:v>
+                              <a:v>PwmPrescalerDiv4</a:v>
+                            </a:da>
+                            <a:da name="DEFAULT" value="PwmPrescalerDiv1"/>
+                          </v:var>
+                           
+                          <!-- @implements PwmModeSelect_Object -->
+                          <v:var name="PwmModeSelect" type="ENUMERATION">
+                            <a:a name="LABEL" value="PwmModeSelect"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Select the pwmmode for the channel from dropdownlist.
+OPWFMB:Variable Period and Variable Duty Cycle
+Bus: Internal only
+OPWMB:Fixed Period, Variable Duty Cycle
+Bus: External bus only
+OPWMT:Fixed Period, Variable Duty Cycle
+Bus: External bus only
+OPWMCB:Variable Period and Variable Duty Cycle
+Bus: External bus only
+DAOC:Variable Period and Variable Duty Cycle
+Bus: Internal or External bus
+NOTE: This is an EMIOS Implementation Specific Parameter.
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:6226aa92-94c3-4aab-b471-d82d04f0694c"/>
+                            <a:da name="DEFAULT" type="XPath" expr="ecu:list('Pwm.OperationModes')[1]">
+                            </a:da>
+                            <a:da name="INVALID" type="XPath">
+                              <a:tst expr="(. = 'PWM_MODE_OPWFMB_U32') and (../EmiosUnifiedChannelBusSelect = 'PWM_BUS_F_U32' or ../EmiosUnifiedChannelBusSelect = 'PWM_BUS_A_U32' or ../EmiosUnifiedChannelBusSelect = 'PWM_BUS_DIVERSE_U32' ) " true="Invalid Bus selection for selected physical PWM channel Mode. When PWM_MODE_OPWFMB_U32 is selected the internal counter is the only option available."/>
+                              <a:tst expr="(. = 'PWM_MODE_OPWMB_U32' or  . = 'PWM_MODE_OPWMT_U32' or . = 'PWM_MODE_OPWMCB_LEAD_DEADTIME_U32' or . = 'PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32') and (../EmiosUnifiedChannelBusSelect = 'PWM_BUS_INTERNAL_COUNTER_U32' ) " true="Invalid Bus selection for selected physical PWM channel Mode.  When PWM_MODE_OPWMB_U32 or PWM_MODE_OPWMT_U32 or PWM_MODE_OPWMCB_LEAD_DEADTIME_U32/PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32 is selected only an external counter can be selected from the counter buses."/>
+                              <a:tst expr="(. = 'PWM_MODE_DAOC_U32') and (../EmiosUnifiedChannelBusSelect = 'PWM_BUS_INTERNAL_COUNTER_U32' ) " true="Invalid Bus selection for selected physical PWM channel Mode.  When PWM_MODE_DAOC_U32 is selected only an external counter can be selected from the counter buses."/>
+                              <a:tst expr="(
+                                              . = 'PWM_MODE_OPWFMB_U32' or
+                                              . = 'PWM_MODE_OPWMB_U32' or 
+                                              . = 'PWM_MODE_OPWMT_U32' or 
+                                              . = 'PWM_MODE_OPWMCB_LEAD_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_DAOC_U32' 
+                                           ) 
+                                           and
+                                           (
+                                              node:value(../../../../../../PwmGeneral/PwmDutycycleUpdatedEndperiod) = 'false' and 
+                                              node:value(../../../../../../PwmGeneral/PwmPeriodUpdatedEndperiod) = 'false'
+                                           )"
+                                           true="Invalid Bus selection for selected update period and duty. When Update period and duty are false, there are no modes can be selected."
+                              />
+                              <a:tst expr="(
+                                              . = 'PWM_MODE_OPWFM_U32' or
+                                              . = 'PWM_MODE_OPWM_U32' or 
+                                              . = 'PWM_MODE_OPWMC_LEAD_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_OPWMC_TRAIL_DEADTIME_U32'
+                                           ) 
+                                           and
+                                           (
+                                              node:value(../../../../../../PwmGeneral/PwmDutycycleUpdatedEndperiod) = 'true' and 
+                                              node:value(../../../../../../PwmGeneral/PwmPeriodUpdatedEndperiod) = 'true'
+                                           )"
+                                           true="Invalid Bus selection for selected update period and duty. When Update period and duty are true, all modes can be selected."
+                              />
+                              <a:tst expr="(
+                                              . = 'PWM_MODE_OPWFMB_U32' or
+                                              . = 'PWM_MODE_OPWMB_U32' or 
+                                              . = 'PWM_MODE_OPWMT_U32' or 
+                                              . = 'PWM_MODE_OPWM_U32' or 
+                                              . = 'PWM_MODE_OPWMCB_LEAD_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_OPWMC_LEAD_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_OPWMC_TRAIL_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_DAOC_U32' 
+                                           ) 
+                                           and
+                                           (
+                                              node:value(../../../../../../PwmGeneral/PwmDutycycleUpdatedEndperiod) = 'false' and 
+                                              node:value(../../../../../../PwmGeneral/PwmPeriodUpdatedEndperiod) = 'true'
+                                           )"
+                                           true="Invalid Bus selection for selected update period and duty. When Update period is true and duty is false, there are no modes can be selected."
+                              />
+                              <a:tst expr="(
+                                              . = 'PWM_MODE_OPWFMB_U32' or
+                                              . = 'PWM_MODE_OPWFM_U32' or
+                                              . = 'PWM_MODE_OPWMB_U32' or 
+                                              . = 'PWM_MODE_OPWMT_U32' or 
+                                              . = 'PWM_MODE_OPWMCB_LEAD_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_OPWMC_LEAD_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_OPWMC_TRAIL_DEADTIME_U32' or 
+                                              . = 'PWM_MODE_DAOC_U32' 
+                                           ) 
+                                           and
+                                           (
+                                              node:value(../../../../../../PwmGeneral/PwmDutycycleUpdatedEndperiod) = 'true' and 
+                                              node:value(../../../../../../PwmGeneral/PwmPeriodUpdatedEndperiod) = 'false'
+                                           )"
+                                           true="Invalid Bus selection for selected update period and duty. When Update period is false and duty is true, there are no modes can be selected."
+                              />
+                              <a:tst expr="(node:exists(../../../../../../PwmGeneral/PwmHwConfiguration/*[((text:split(PwmInterruptHwId,'_')[4] = text:split(node:current()/../PwmeMiosChannel,'_')[2]) and (text:split(PwmInterruptHwId,'_')[2] = text:split(node:current()/../../../PwmeMiosModule,'_')[2])) and (node:value(PwmInterruptEnable) != 'true')])) and ( . = 'PWM_MODE_DAOC_U32') " true="DAOC requires interrupt to calculate the next match value, thus interrupt should be enable for current channel. Please go to PwmGeneral/PwmHwConfiguration/*/PwmInterruptEnable and enable interrupt in corresponding channel"/>
+                              <a:tst expr="(. = 'PWM_MODE_OPWFMB_U32') and (../../../../../../PwmGeneral/EmiosOperationModes/PwmOPWFMBfeature  = 'false')" true="PwmOPWFMBfeature is not enabled in PwmGeneral/EmiosOperationMode "/>
+                              <a:tst expr="(. = 'PWM_MODE_OPWMB_U32') and (../../../../../../PwmGeneral/EmiosOperationModes/PwmOPWMBfeature  = 'false')" true="PwmOPWMBfeature is not enabled in PwmGeneral/EmiosOperationMode "/>
+                              <a:tst expr="(. = 'PWM_MODE_OPWMT_U32') and (../../../../../../PwmGeneral/EmiosOperationModes/PwmOPWMTfeature  = 'false')" true="PwmOPWMTfeature is not enabled in PwmGeneral/EmiosOperationMode "/>
+                              <a:tst expr="(. = 'PWM_MODE_DAOC_U32') and (../../../../../../PwmGeneral/EmiosOperationModes/PwmDAOCfeature  = 'false')" true="PwmDAOCfeature is not enabled in PwmGeneral/EmiosOperationMode "/>
+                              <a:tst expr="((. = 'PWM_MODE_OPWMCB_LEAD_DEADTIME_U32') or (. = 'PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32')) and (../../../../../../PwmGeneral/EmiosOperationModes/PwmOPWMCBfeature  = 'false')" true="PwmOPWMCBfeature is not enabled in PwmGeneral/EmiosOperationMode "/>
+                            </a:da>
+                            <a:da name="RANGE" type="XPath" expr="ecu:list('Pwm.OperationModes')"/>
+                          </v:var>
+
+                          <v:var name="EmiosUnifiedChannelBusSelect" type="ENUMERATION">
+                            <a:a name="LABEL" value="EmiosUnifiedChannelBusSelect"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Select the counter bus used by the unified channel
+PWM_BUS_A_U32 - counter busA
+PWM_BUS_DIVERSE_U32 - counter bus B, C, D or E specific to each unified channel
+                  busB is controlled by unified channel 0 and is available for unified channels 0->7 
+                  busC is controlled by unified channel 8 and is available for unified channels 8->15
+                  busD is controlled by unified channel 16 and is available for unified channels 16->23 
+                  busE is controlled by unified channel 24 and is available for unified channels 24->31
+PWM_BUS_INTERNAL_COUNTER_U32 - unified channel internal counter
+NOTES: This is an EMIOS Implementation Specific Parameter
+Implementation details:
+EMIOS_A/B: busA - available on all channels
+EMIOS_A/B: busF - available on all channels
+EMIOS_A/B: busB - available on channels 0 to 7
+EMIOS_A/B: busC - available on channels 8 to 15
+EMIOS_A/B: busD - available on channels 16 to 23
+EMIOS_A/B: busE - available on channels 24 to 31
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:9c1734c7-67de-4a08-92d8-e732b6b6c0ad"/>                     
+                            <a:da name="RANGE">
+                              <a:v>PWM_BUS_A_U32</a:v>
+                              <a:v>PWM_BUS_F_U32</a:v>
+                              <a:v>PWM_BUS_DIVERSE_U32</a:v>
+                              <a:v>PWM_BUS_INTERNAL_COUNTER_U32</a:v>
+                            </a:da>                     
+                            <a:da name="DEFAULT" value="PWM_BUS_INTERNAL_COUNTER_U32"/>
+                          </v:var>
+
+                          <v:var name="PwmOffset" type="INTEGER">
+                            <a:a name="LABEL" value="PwmOffset (ticks)"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Offset (in ticks) of the PWM output. This parameter is used only in PWM_MODE_OPWMB_U32 or PWM_MODE_OPWMT_U32 modes.
+Please note that the counter will always start from 1, and the Offset value is incremented by 1 in the code.
+The programmed value must be less than the period of the channel used as reference or else a DET error will be generated.
+NOTE: This is an EMIOS Implementation Specific Parameter.
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <!-- /** the Offset parameter makes sense only when PwmModeSelect is PWM_MODE_OPWMB_U32 or PWM_MODE_OPWMT_U32 */-->
+                            <a:da name="EDITABLE" type="XPath">
+                              <a:tst expr="(../PwmModeSelect = 'PWM_MODE_OPWMB_U32') or (../PwmModeSelect = 'PWM_MODE_OPWMT_U32')"/>
+                            </a:da>                       
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:8bd84d8d-f01b-4df1-a19f-808ede6dfc64"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=16777214"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                            <a:da name="DEFAULT" value="0"/>
+                          </v:var>
+
+                          <v:var name="PwmTriggerDelay" type="INTEGER">
+                            <a:a name="LABEL" value="PwmTriggerDelay (ticks)"/>
+                            <!-- /** the trigger delay makes sense only when PwmModeSelect is PWM_MODE_OPWMT_U32 */  -->
+                            <a:da name="EDITABLE" type="XPath" expr=" (../PwmModeSelect = 'PWM_MODE_OPWMT_U32' )"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Select input count source (clock) used for this eMios channelDelay (in ticks) for generating the trigger event. This parameter is used only in PWM_MODE_OPWMT_U32 mode.
+Please note that the counter will always start from 1, and the Trigger value is incremented by 1 in the code, then the value is updated into Alternate A register.
+The programmed value in the A2 register must be less or equal to the value of the channel period used as reference or else the CTU triggers will not be generated.
+NOTE:This is an EMIOS Implementation Specific Parameter.
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS"  type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:def1f333-8d5a-48f8-ab32-10191c168322"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=16777214"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+
+                          <v:var name="Pwm_Deadtime" type="INTEGER">
+                            <a:a name="LABEL" value="Pwm_Deadtime(ticks)"/>
+                          <!-- /** the dead time makes sense only when PwmModeSelect is PWM_MODE_OPWMCB_LEAD_DEADTIME_U32/PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32 */  -->
+                            <a:da name="EDITABLE" type="XPath" expr="(../PwmModeSelect = 'PWM_MODE_OPWMCB_LEAD_DEADTIME_U32' ) or (../PwmModeSelect = 'PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32' )"/>
+                            <a:a name="DESC"> <a:v><![CDATA[
+                                <html>
+                                This is only for the center aligned feature(OPWMCB mode).
+                                DeadtimeCount parameter controls the deadtime during transitions of the PWM output.<br>
+                                Deadtime operation is only applicable to OPWMCB Mode<br>                            
+                                <h1>Note</h1>This is an Implementation Specific Parameter.</html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:51e6da2d-58d8-411e-b7b1-dcdab00dad85"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=32767"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>                   
+
+                          <v:var name="OffsetDelayAdjust" type="BOOLEAN">
+                            <a:a name="DESC" ><a:v>
+<![CDATA[
+                        <html>
+                       This parameter decides whether the Offset and Trigger Delay is recalculated when the frequency changes during run time. 
+                       This parameter is used only in OPWMB and OPWMT modes.
+                    True: Offset and Trigger Delay is adjusted during runtime
+                    False: Offset and Trigger Delay is not adjusted during runtime
+ <h1>Note</h1>This is an Implementation Specific Parameter.   
+</html> ]]></a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS"  type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>                    
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" 
+                               value="ECUC:63fe02c4-2c9d-4a82-81c0-9f35c2f1b4f3"/>
+                            <a:da name="DEFAULT" value="false"/>
+                            <a:da name="EDITABLE" type="XPath" expr=" (../PwmModeSelect = 'PWM_MODE_OPWMT_U32' ) or 
+                                                    (../PwmModeSelect = 'PWM_MODE_OPWMB_U32' )  "/>
+                          </v:var>
+                          <v:var name="PwmFreezeEnable" type="BOOLEAN">
+                            <a:a name="LABEL" value="PwmFreezeEnable"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Freeze Enable Bit. The FREN bit, if set and validated by FRZ bit in EMIOS_MCR register, freezes all registers Value of period used for Initialization. 
+0 Normal operation
+1 Freeze unified channel registers values
+Note: This is an EMIOS Implementation Specific Parameter.
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:993219ef-3f4e-49c0-bf0c-13ae19bfd83a"/>
+                            <a:da name="DEFAULT" value="false"/>
+                          </v:var>
+                        </v:ctr>
+                      </v:lst>
+                      <v:lst name="PwmeMiosMasterBus" type="MAP">
+                        <a:da name="MIN" value="0"/>
+                        <a:da name="MAX" value="6"/>
+                        <v:ctr name="PwmeMiosMasterBus" type="IDENTIFIABLE">
+                          <a:a name="LABEL" value="eMios Master bus"/>
+                          <a:a name="DESC"><a:v><![CDATA[EN:
+                        <html>
+List of Master bus available on the platform.
+                        </html> ]]>
+                              </a:v>
+                          </a:a>
+                          <a:a name="UUID" value="ECUC:036ee1f7-61c3-4601-9bca-184fe4f74901"/>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                               <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                               <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                          </a:a>
+                          <v:var name="PwmeMiosMasterBus" type="ENUMERATION">
+                            <a:a name="LABEL" value="eMios Channel"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Selects one of the eMios channels available on the platform.
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:eab1e62c-5eac-4499-b6dc-5e08d36837ce"/>
+                            <!--  default value - increment the last channel used -->
+                            <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Pwm.eMios_Hw_MasterBuses'))[position()-1=node:fallback(node:current()/../@index,'0')]">
+                              
+                            </a:da>
+                            <a:da name="INVALID" type="XPath">
+                              <a:tst expr="text:uniq(../../*/PwmeMiosMasterBus, .) and not(node:containsValue(../../../PwmeMiosChannels/*/PwmeMiosChannel, .))" false="Duplicate physical eMios channel"/>
+                              <a:tst expr="node:exists(../../../../../../PwmGeneral/PwmHwConfiguration/*[((text:split(PwmInterruptHwId,'_')[4] = text:split(node:current(),'_')[2]) and (text:split(PwmInterruptHwId,'_')[2] = text:split(node:current()/../../../PwmeMiosModule,'_')[2])) and (node:value(PwmChannelIsUsed) = 'true')])" false="please enable this channel in PwmGeneral/PwmHwConfiguration/*/PwmChannelIsUsed"/>
+                            </a:da>
+                            <a:da name="RANGE" type="XPath" expr="ecu:list('Pwm.eMios_Hw_MasterBuses')"/>
+                          </v:var>
+
+                          <v:var name="MasterModeSelect" type="ENUMERATION">
+                            <a:a name="LABEL" value="MasterModeSelect"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Select the counter mode for master bus.
+- MASTER_MODE_UP_DOWN_BUFFERED_COUNTER_U32: Modulus Counter Buffered (Up/Down Counter). This mode is used for channels that run in PWM_MODE_OPWMCB_LEAD_DEADTIME_U32 or PWM_MODE_OPWMCB_TRAIL_DEADTIME_U32
+- MASTER_MODE_UP_BUFFERED_COUNTER_U32: Modulus Counter Buffered (Up Counter). This mode is used for channels that run in PWM_MODE_OPWMB_U32 or PWM_MODE_OPWMT_U32 or PWM_MODE_DAOC_U32
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:3b1a2c9c-bed2-4b1c-99f5-9350f1701049"/>
+                            <a:da name="DEFAULT" value="MASTER_MODE_UP_BUFFERED_COUNTER_U32"/>
+                            <a:da name="RANGE">
+                              <a:v>MASTER_MODE_UP_BUFFERED_COUNTER_U32</a:v>
+                              <a:v>MASTER_MODE_UP_DOWN_BUFFERED_COUNTER_U32</a:v>
+                            </a:da>
+                          </v:var>
+                          <v:var name="MasterBusPeriodInTicks" type="BOOLEAN">
+                            <a:a name="LABEL" value="MasterBusPeriodInTicks"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                              <html>
+MasterBusPeriodInTicks
+By default Period unit of master bus is measured in Seconds.
+Enable this check to set Default Period unit in Ticks.
+                          </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:33143379-d9a3-4831-baa4-811a8321bf54"/>
+                            <a:da name="DEFAULT" value="false"/>
+                          </v:var>
+
+                          <v:var name="MasterBusPeriodDefault" type="FLOAT">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                              <html>
+Default period value used at initialization.
+The mesure unit are in ticks.
+Valid values [0, 0xFFFE = 65534]
+                              </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:af0d1825-cf55-42d9-9dcd-f15deaedf5bc"/>
+                            <a:da name="DEFAULT" type="XPath">
+                            <a:tst expr="(((num:i(number(node:fallback(../MasterBusPeriodInTicks, 'false') = 'false'))) * 0.001) + ((num:i(number(node:fallback(../MasterBusPeriodInTicks, 'true') = 'true'))) * 10000))"/>
+                            </a:da>
+                            <a:da name="RANGE" type="XPath">
+                            <a:tst expr="((node:fallback(../MasterBusPeriodInTicks, 'true') = 'true') and
+                                        ((node:fallback(../../../../../../../PwmGeneral/PwmTimerPrecision, 'PWM_24BIT') = 'PWM_24BIT' and (. > num:i(16777215) or . &lt;1 )) or 
+                                        (node:fallback(../../../../../../../PwmGeneral/PwmTimerPrecision, 'PWM_16BIT') = 'PWM_16BIT' and (. > num:i(65535) or . &lt;1))))"
+                                        true="Value must be higher then 0 and lower (or equal) 65535 if timer uses 16Bit precision or lower then 16777215 for 24Bit timers"/>
+                            </a:da>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=65534"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+
+                          <v:var name="MasterBusPrescaler" type="ENUMERATION">
+                            <a:a name="LABEL" value="Master bus Prescaler"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Select clock prescaler used for this eMios channel. The internal counter must be selected for this setting to take any effect
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                          <!-- /** the prescaler makes sense only when PwmModeSelect is MASTER_MODE_UP_COUNTER_U32 or MASTER_MODE_UP_DOWN_COUNTER_U32  -->
+                            <a:da name="EDITABLE" value="true"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:57f96dd7-7682-49fd-b926-cf3a0593d80b"/>
+                            <a:da name="RANGE">
+                              <a:v>PwmPrescalerDiv1</a:v>
+                              <a:v>PwmPrescalerDiv2</a:v>
+                              <a:v>PwmPrescalerDiv3</a:v>
+                              <a:v>PwmPrescalerDiv4</a:v>
+                            </a:da>
+                            <a:da name="DEFAULT" value="PwmPrescalerDiv1"/>
+                          </v:var>
+                          
+                          <v:var name="MasterBusPrescaler_Alternate" type="ENUMERATION">
+                            <a:a name="LABEL" value="Master bus Prescaler Alternate"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                        <html>
+Select clock prescaler used for this eMios channel. The internal counter must be selected for this setting to take any effect
+                        </html> ]]>
+                              </a:v>
+                            </a:a>
+                            <a:da name="EDITABLE" type="XPath" expr="node:value(../../../../../../PwmGeneral/PwmEnableDualClockMode) = 'true'" />
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="NXP"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:6155e67e-95ab-434a-979a-22583824eaae"/>
+                            <a:da name="RANGE">
+                              <a:v>PwmPrescalerDiv1</a:v>
+                              <a:v>PwmPrescalerDiv2</a:v>
+                              <a:v>PwmPrescalerDiv3</a:v>
+                              <a:v>PwmPrescalerDiv4</a:v>
+                            </a:da>
+                            <a:da name="DEFAULT" value="PwmPrescalerDiv1"/>
+                          </v:var>
+
+                        </v:ctr>
+                      </v:lst>
+                    </v:ctr>
+                  </v:lst>
+                </v:ctr>                        
+              <!-- @implements PwmGeneral_Object -->
+              <v:ctr name="PwmGeneral" type="IDENTIFIABLE">
+                <a:a name="UUID" value="ECUC:87b4ce2d-3789-48ac-bddf-bb2252226b5a"/>
+                <a:a name="DESC">
+                     <a:v><![CDATA[EN:
+                          <html>
+PwmGeneral
+                                     Container used for storing the general configuration of Pwm.
+                          </html> ]]>
+                     </a:v>
+                </a:a>
+
+                <!-- @implements PwmDevErrorDetect_Object -->
+                <v:var name="PwmDevErrorDetect" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch for enabling / disabling the development error detection.
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:ef001597-ed74-4711-8305-6450ad8fb18a"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- @implements PwmDutycycleUpdatedEndperiod_Object -->
+                <v:var name="PwmDutycycleUpdatedEndperiod" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                          <html>
+Switch for enabling the update of the duty cycle parameter at the end of the current period. <p></p>
+<b>LIMITATION</b>: Curent implementation supports the update of the duty cycle
+parameter only at the end of the current period.
+                          </html> ]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:d0a42025-b035-4372-b793-021eb086fd73"/>
+                  <a:da name="DEFAULT" value="true"/>
+                  <a:da name="EDITABLE" value="true"/>
+                </v:var>
+
+                <!-- @implements PwmNotificationSupported_Object -->
+                <v:var name="PwmNotificationSupported" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch to indicate that the notifications are supported.
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:eca48953-091c-4b7f-a6e2-f4e153d9adc5"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                
+                <!-- @implements PwmEnableDualClockMode_Object -->
+                <v:var name="PwmEnableDualClockMode" type="BOOLEAN">
+                    <a:a name="DESC">
+                        <a:v><![CDATA[EN:
+                        <html>
+ Adds / removes the services Pwm_SetClockMode() from the code.This function is called when the prescaler value needs to be change to maintain same period at different frequency.
+Note:
+ <h1>Note</h1>This is an Implementation Specific Parameter.</html>
+                      ]]></a:v>
+                        </a:a>
+                    <a:a name="ORIGIN" value="NXP"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:3b18594f-ae36-4249-a801-c5a711352de0"/>
+                    <a:da name="DEFAULT" value="false"/>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    </a:a>
+                </v:var>
+
+                <!-- @implements PwmPeriodUpdatedEndperiod_Object -->
+                <v:var name="PwmPeriodUpdatedEndperiod" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+EN: Switch for enabling the update of the period parameter at the end of the current period 
+LIMITATION: Curent implementation supports the update of the period parameter only at the end of the current period.
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:c80bb1e0-18c7-404d-9eea-fe13597fc9d5"/>
+                  <a:da name="DEFAULT"  value="true"/>
+                  <a:da name="EDITABLE" value="true"/>
+                </v:var>
+                
+                <v:var name="PwmChangeRegisterA" type="BOOLEAN">
+                  <a:a name="LABEL" value="PwmChangeRegisterA"/>
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+EN: If enabled for all OPWMT channels at dutycycle change register A will be updated instead of B.
+For OPWMT mode this means that the CTU trigger will maintain a fixed position relative to register B position.
+Note: This is an EMIOS implementation specific API.
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:e07d62b2-410f-4122-bd9a-6b7221f37aae"/>
+                  <a:da name="DEFAULT" value="false"/>     
+                </v:var>
+                
+                <!-- @implements PwmLowPowerStatesSupport_Object -->
+                <v:var name="PwmLowPowerStatesSupport" type="BOOLEAN">
+                    <a:a name="DESC">
+                        <a:v><![CDATA[EN:
+                        <html>
+                        EN: If enabled, Hardware offer low power mode and Adds all power state management related APIs (PWM_SetPowerState, PWM_GetCurrentPowerState, PWM_GetTargetPowerState, PWM_PreparePowerState, PWM_Main_PowerTransitionManager), indicating if the HW offers low power state management.
+                        </html> ]]>
+                        </a:v>
+                    </a:a>      
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:a name="OPTIONAL" value="true"/>
+                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                    <a:a name="SCOPE" value="LOCAL"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:c33a1896-8fc4-4eb7-929a-704ab99e3d3d"/>
+                    <a:da name="DEFAULT" value="false"/>
+                </v:var>
+                
+                <v:var name="PwmPowerStateAsynchTransitionMode" type="BOOLEAN">
+                    <a:a name="DESC" 
+                         value="EN: Enables / disables support of the PWM Driver to the asynchronous power state transition."/>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:a name="OPTIONAL" value="true"/>
+                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                    <a:a name="SCOPE" value="LOCAL"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:ac453b11-25dd-40cf-9f52-b9d4b8c7b070"/>
+                    <a:da name="DEFAULT" value="false"/>
+                    <a:da name="READONLY" value="true"/>
+                </v:var>
+                
+				<!-- @implements PwmEnableUserModeSupport_Object -->
+				<v:var name="PwmEnableUserModeSupport" type="BOOLEAN">
+                    <a:a name="DESC">
+                        <a:v>
+                            <![CDATA[EN:<html>
+                                When this parameter is enabled, the Pwm module will adapt to run from User Mode. There is no difference between User mode and Privileged mode in PWM module.
+                                Note: Implementation Specific Parameter.
+                            </html>]]>
+                        </a:v>
+                    </a:a>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    </a:a>
+                    <a:a name="LABEL" value="Pwm Enable User Mode Support"/>
+                    <a:a name="ORIGIN" value="NXP"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:f466e20d-5bba-65fa-be74-2bd1bb030b88"/>
+                    <a:da name="DEFAULT" value="false"/>
+                </v:var>
+				
+                <!-- @implements PwmIndex_Object -->
+                <v:var name="PwmIndex" type="INTEGER">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                          <html>
+Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0. <p></p>
+<b>LIMITATION</b>: In the current implementation this parameter is not used.
+                          </html> ]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:e626914f-156b-4e26-8b9e-978dbe8dca58"/>
+                  <a:da name="READONLY" value="true"/>
+                  <a:da name="DEFAULT" value="0"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&lt;=4294967295"/>
+                    <a:tst expr="&gt;=0"/>
+                  </a:da>
+                </v:var>
+ 
+                <v:var name="PwmTimerPrecision" type="ENUMERATION">
+                  <a:a name="LABEL" value="Pwm Timer Precision Mode"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>
+EN: Select type of timer is 16bits or 24bits
+                      </html> ]]>
+                    </a:v>
+                    </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="UUID" value="ECUC:6f44422b-de63-454f-a506-d8a09b9cd275"/>
+                  <a:da name="DEFAULT" type="XPath" expr="ecu:list('Pwm.TimerPrecision')[1]">
+                  </a:da>
+                  <a:da name="RANGE" type="XPath" expr="ecu:list('Pwm.TimerPrecision')"/>
+                </v:var>
+                <v:lst name="PwmHwConfiguration" type="MAP">
+                  <a:a name="MIN" type="XPath" expr="num:i(count(ecu:list('Pwm.HwChannel_List')))"/>  
+                  <a:a name="MAX" type="XPath" expr="num:i(count(ecu:list('Pwm.HwChannel_List')))"/>
+
+                  <v:ctr name="PwmHwConfiguration" type="IDENTIFIABLE">
+                    <a:a name="DESC">
+                        <a:v><![CDATA[EN:<html>
+                            List of all HW channel resources for PWM module.
+                          </html> ]]>
+                        </a:v>
+                    </a:a>
+                    <a:a name="UUID" value="ECUC:de2adbaf-35ef-fd23-89de-65665795e1b8"/>
+                    <!--/** PwmInterruptHwId */-->
+                    <v:var name="PwmInterruptHwId" type="ENUMERATION">
+                      <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                          <html>
+                          ID of HW interrupt resources.
+                          </html> ]]>
+                          </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="LABEL" value="Pwm Interrupt Name"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                      <a:a name="UUID" value="ECUC:42bdb265-2e2e-9d91-abcd-977c9fc0cb53"/>
+                      <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Pwm.HwChannel_List'))[position()-1=node:fallback(node:current()/../@index, num:i(0)+1)]">
+                            </a:da>
+                            <a:da name="RANGE" type="XPath" expr="ecu:list('Pwm.HwChannel_List')"/> 
+                      <a:da name="INVALID" type="XPath">
+                               <a:tst expr="text:uniq(../../*/PwmIsrHwId, .)"                                                 
+                                    false="Pwm channels should have unique IDs."/>                                             
+                      </a:da>   
+                    </v:var>
+                    <!--/** PwmInterruptEnable */-->
+                    <v:var name="PwmInterruptEnable" type="BOOLEAN">
+                      <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                          <html>
+                          Enable/Disable HW channels' Interrupt Sources.
+                          </html> ]]>
+                          </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                         <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                         <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:da name="DEFAULT" value="false"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="UUID" value="ECUC:04fbe442-ffd3-56fd-8e68-9f7c9fc0cb23"/>
+                      <a:da name="INVALID" type="XPath">
+                           <a:tst expr="(node:value(.) = 'true') and (node:value(../PwmChannelIsUsed) = 'false')"
+                             true="Cannot use the channel's interrupt without enabling the channel. Please enable the channel!"/>
+                      </a:da>
+                    </v:var>
+                    <!--/** PwmChannelIsUsed */-->
+                    <v:var name="PwmChannelIsUsed" type="BOOLEAN">
+                      <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                          <html>
+                          This column configures HW channels which are going to be used.
+                          </html> ]]>
+                          </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                         <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                         <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:da name="DEFAULT" value="false"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="UUID" value="ECUC:04ebf442-ffd3-fd56-8e68-7c9f9fc023cb"/>
+                    </v:var>
+                  </v:ctr>
+              </v:lst>  
+              <v:lst name="PwmPowerStateConfig" type="MAP">
+                  <a:da name="EDITABLE"  type="XPath" expr=" (../PwmPowerStateAsynchTransitionMode = 'true' )"/>
+                  <v:ctr name="PwmPowerStateConfig" type="IDENTIFIABLE">
+                      <a:a name="DESC" 
+                       value="EN: Each instance of this parameter defines a power state and the callback to be called when this power state is reached."/>
+                      <a:a name="UUID" value="ECUC:de14dbaf-3499-4b7e-89de-65775795e1b9"/>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                         <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                         <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+
+                      <v:var name="PwmPowerState" type="INTEGER">
+                          <a:a name="DESC" 
+                              value="EN: Each instance of this parameter describes a different power state supported by the PWM HW. It should be defined by the HW supplier and used by the PWMDriver to reference specific HW configurations which set the PWM HW module in the referenced power state."/>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                          <a:a name="SCOPE" value="LOCAL"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                          <a:a name="UUID"  value="ECUC:19cc5c0f-3c89-4ccb-a19a-09d55a125a4c"/>
+                          <a:da name="DEFAULT" value="0"/>
+                          <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=18446744073709551615"/>
+                          <a:tst expr="&gt;=0"/>
+                          </a:da>                      
+                      </v:var>
+              
+                      <v:var name="PwmPowerStateReadyCbkRef" type="FUNCTION-NAME">
+                          <a:a name="DESC" 
+                         value="EN: Each instance of this parameter contains a reference to a power mode callback defined in a CDD or IoHwAbs component." />
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                             <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                             <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                          <a:a name="SCOPE" value="LOCAL"/>
+                          <a:da name="DEFAULT" value="NULL"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                          <a:a name="UUID" value="ECUC:08fbf442-0ed3-474d-8b47-977c9fc0cb23"/>
+                      </v:var>
+                  </v:ctr>
+             </v:lst>
+             <v:ctr name="EmiosOperationModes" type="IDENTIFIABLE">
+                <a:a name="UUID" value="ECUC:87b4ce21-3789-48ac-bddf-bb2252226b5a"/>
+                <a:a name="DESC">
+                     <a:v><![CDATA[EN:
+                          <html>
+                                Container used for storing the configurations of specific operation mode for emios.
+                          </html> ]]>
+                     </a:v>
+                </a:a>
+
+                <v:var name="PwmOPWFMBfeature" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch for enabling / disabling Output Pulse Width and Frequency Modulation Buffered (OPWFMB) Mode
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:e2001597-ed74-4711-8305-6450ad8fb18a"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+                <v:var name="PwmOPWMBfeature" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch for enabling / disabling Output Pulse Width Modulation Buffered (OPWMB) Mode
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:e2001598-ed74-4711-8305-6450ad8fb18a"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+                <v:var name="PwmOPWMTfeature" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch for enabling / disabling Output Pulse Width Modulation with Trigger (OPWMT) Mode
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:e2001599-ed74-4711-8305-6450ad8fb18a"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+                <v:var name="PwmOPWMCBfeature" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch for enabling / disabling Center Aligned Output Pulse Width Modulation with Dead Time Insertion Buffered (OPWMCB) Mode
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:e200159a-ed74-4711-8305-6450ad8fb18a"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+                <v:var name="PwmDAOCfeature" type="BOOLEAN">
+                  <a:a name="DESC"><a:v><![CDATA[EN:
+                          <html>
+Switch for enabling / disabling Double Action Output Compare (DAOC) Mode
+                          </html> ]]>
+                          </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:e200159b-ed74-4711-8305-6450ad8fb18a"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+              </v:ctr>
+           </v:ctr>
+              
+              
+             <!-- @implements CommonPublishedInformation_Object -->
+              <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                <a:a name="DESC">
+                  <a:v><![CDATA[EN:
+                      Common container, aggregated by all modules. It contains published information about vendor and versions.
+                  ]]></a:v>
+                </a:a>
+                <a:a name="UUID" value="ECUC:ce580810-ecab-4069-bf3d-d43791d4b888"/>
+                <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN: 
+                          <html>
+                      Major version number of AUTOSAR specification on which the appropriate implementation is based on.
+                          </html>
+                      ]]></a:v>
+                  </a:a>              
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    </a:a> 
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:44ebebfd-e09d-4801-8169-5146889dc33a"/>
+                  <a:da name="DEFAULT" value="4"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=4"/>
+                    <a:tst expr="&lt;=4"/>
+                  </a:da>
+                </v:var>
+                
+                <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN: 
+                          <html>
+                      Minor version number of AUTOSAR specification on which the appropriate implementation is based on.
+                          </html>
+                      ]]></a:v>
+                  </a:a>              
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    </a:a> 
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:6df0ab0d-d7f1-472a-9982-e27b9cf4661d"/>
+                  <a:da name="DEFAULT" value="2"/>
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=2"/>
+                      <a:tst expr="&lt;=2"/>
+                  </a:da>
+                </v:var>
+                <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN:
+                          <html>
+                      Revision version number of AUTOSAR specification on which the appropriate implementation is based on.
+                          </html>
+                      ]]></a:v>
+                  </a:a>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    </a:a> 
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:42953d8e-db94-4e58-be81-b1836cecfd75"/>
+                  <a:da name="DEFAULT" value="2"/>
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=2"/>
+                      <a:tst expr="&lt;=2"/>
+                  </a:da>
+                </v:var>
+                
+                <v:var name="ModuleId" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN:
+                          <html>
+                      Module ID of this module from Module List.
+                          </html>
+                      ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a> 
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:353441dc-74f6-403e-a4a9-3579df0e51dc"/>
+                  <a:da name="DEFAULT" value="121"/>
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=121"/>
+                      <a:tst expr="&lt;=121"/>
+                  </a:da>
+                </v:var>
+                <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN:
+                          <html>
+                      Major version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                          </html>
+                      ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a> 
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:c7366144-d705-45ee-affc-efe3d3b27fae"/>
+                  <a:da name="DEFAULT" value="1"/>
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=1"/>
+                      <a:tst expr="&lt;=1"/>
+                  </a:da>
+                </v:var>
+                <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                          <html>
+                    Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                          </html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a> 
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:c5e78757-cf75-46ec-a98c-4c5946afd5fd"/>
+                  <a:da name="DEFAULT" value="0"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=0"/>
+                    <a:tst expr="&lt;=0"/>
+                  </a:da>
+                </v:var>
+                <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                          <html>
+                    Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                          </html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a> 
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:14769012-7e04-48c3-ae06-df3281296c4b"/>
+                  <a:da name="DEFAULT" value="0"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=0"/>
+                    <a:tst expr="&lt;=0"/>
+                  </a:da>
+                </v:var>
+                <v:var name="VendorApiInfix" type="STRING_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN:
+                          <html>
+                      In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name.
+                      This parameter is used to specify the vendor specific name. In total, the implementation specific name is generated as follows:
+                      &lt;ModuleName&gt;_&gt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                      E.g.  assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of &quot;v11r456&quot; a api name Can_Write defined in the SWS will translate to Can_123_v11r456Write.
+                      This parameter is mandatory for all modules with upper multiplicity &gt; 1. It shall not be used for modules with upper multiplicity =1.
+                          </html>
+                    ]]></a:v>                          
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a> 
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:dc9088f2-0094-41e7-b063-58f24b90979f"/>
+                  <a:da name="DEFAULT" value=""/>
+                  <a:a name="OPTIONAL" value="true"/>
+                  <a:da name="READONLY" value="true"/>
+                </v:var>
+                <v:var name="VendorId" type="INTEGER_LABEL">
+                    <a:a name="DESC">
+                        <a:v><![CDATA[EN:
+                          <html>
+                          Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.
+                          </html>
+                        ]]></a:v>
+                    </a:a>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a> 
+                    <a:a name="ORIGIN" value="NXP"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:7921ab79-8e8d-46a0-b495-49d64216b661"/>
+                    <a:da name="DEFAULT" value="43"/>
+                    <a:da name="INVALID" type="Range">
+                        <a:tst expr="&gt;=43"/>
+                        <a:tst expr="&lt;=43"/>
+                    </a:da>
+                </v:var>
+              </v:ctr>
+            </v:ctr>
+          </d:chc>
+
+          <d:chc name="Pwm_EcuParameterDefinition"
+                            type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+
+            <d:ctr type="AR-ELEMENT">
+                <a:a name="UUID" value="ECUC:269d9e85-e856-46ae-91b3-b54e6ebbf579"/>
+              <a:a name="DEF"
+                   value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+              <d:lst name="MODULE_REF">
+                <d:ref type="MODULE_REF" value="ASPath:/TS_T2D35M10I0R0/Pwm"/>
+              </d:lst>
+            </d:ctr>
+          </d:chc>
+          <d:chc name="Pwm_ModuleDescription"
+                            type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+            <d:ctr type="AR-ELEMENT">
+              <a:a name="DEF"
+                   value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+              <d:var name="MODULE_ID" type="INTEGER" >
+                <a:a name="EDITABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:var>
+              <d:ref type="RECOMMENDED_CONFIGURATION" >
+                <a:a name="EDITABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:ref>
+              <d:ref type="PRE_CONFIGURED_CONF" >
+                <a:a name="EDITABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:ref>
+              <d:ref type="VENDOR_SPECIFIC_MODULE_DEF"
+                     value="ASPath:/TS_T2D35M10I0R0/Pwm"/>
+            </d:ctr>
+          </d:chc>
+
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+</datamodel>

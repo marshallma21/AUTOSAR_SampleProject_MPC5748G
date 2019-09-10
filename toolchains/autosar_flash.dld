@@ -1,0 +1,186 @@
+/*==================================================================================================
+
+   @file        autosar_flash.dld
+   @version     1.0.0
+
+   @brief       DIAB Linker Command File for Internal FLASH for Calypso 3M.
+   @details     DIAB Linker Command File for Internal FLASH for Calypso 3M.
+                This file contains sample code only. It is not part of the production code deliverables
+====================================================================================================    
+   Project      : AUTOSAR 4.2 MCAL
+   Platform     : PA
+   Peripheral   : 
+   Dependencies : Base Det Dem Port Dio Mcu Rte Wdg WdgIf CanIf LinIf FrIf EcuM
+   
+   Autosar Version       : 4.2.2
+   Autosar Revision      : ASR_REL_4_2_REV_0002
+   Autosar Conf. Variant : 
+   Software Version      : 1.0.0
+   Build Version         : MPC574XG_MCAL_1_0_0_RTM_ASR_REL_4_2_REV_0002_20171702
+
+   (c) Copyright 2006-2017 NXP Inc
+   All Rights Reserved.
+   
+   This file contains sample code only. It is not part of the production code deliverables.
+
+====================================================================================================
+
+Note: This linker command file to be used with MPC574XC/G device only.
+==================================================================================================*/
+
+
+MEMORY {
+
+    /* 5748G - Flash 6.0 MB - 0x00F90000 - 0x0157FFFF */
+    /* 5746C - Flash 3.0 MB - 0x00F90000 - 0x0127FFFF */
+
+    flash_rsvd1         : org = 0x00F90000, len = 0x70000
+    flash_memory        : org = 0x01000000, len = 0x270000
+    flash_vec           : org = 0x01270000, len = 0x10000
+    flash_rsvd2         : org = 0x01280000, len = 0
+
+    /* 5748G - SRAM 768KB  : 0x40000000 - 0x400BFFFF */
+    /* 5746C - SRAM 512KB  : 0x40000000 - 0x4007FFFF */
+    ram_rsvd1    :     org = 0x20000000, len = 0
+    int_sram     :     org = 0x40000000, len = 0x60B60 
+    res_ram      :     org = 0x40060B60, len = 0x60 /* a reserved ram section needed by FLS driver */   
+    iram_stack   :     org = 0x40060BC0, len = 0x1000
+    int_timers   :     org = 0x40061BC0, len = 0x0340 
+    int_results  :     org = 0x40061F00, len = 0x100
+    int_sram_no_cacheable   : ORIGIN = 0x40062000, LENGTH = 0x1E000
+    ram_rsvd2    :     org = 0x40080000, len = 0
+
+}
+
+   
+/*
+ Program layout for starting in ROM, copying data to RAM,
+ and continuing to execute out of ROM.
+*/
+
+SECTIONS
+{
+/* Place BINDED entries first, then place other entries    */
+/* in order of desired relative placement.                 */
+    GROUP  : {      
+        .isrvectbl_core(TEXT) : {}
+        .isrvectbl(TEXT) ALIGN(0x1000): {}  
+    }>flash_vec    
+
+/*----------------*/
+/* SECTIONS    */   
+/*----------------*/            
+      GROUP : {
+           .rcw : {}
+    }>flash_rsvd1
+     
+      GROUP : {
+        .text (TEXT) : {}
+        .text_vle(TEXT): {}
+            .acfls_code_rom(TEXT)  ALIGN(4) : {}
+        .rodata(TEXT) :{}
+        .sdata2 (DATA) : {}
+            .mcal_const_cfg (TEXT) : {}
+            .mcal_const (TEXT) : {}
+        .fixaddr : {}
+        .fixtype : {}
+        .align_section ALIGN(16): {}
+        _load_ramcode = . ; /* The start of the flash region rezerved for ramcode section and for the .sdata0, .sdata and .data sections.*/
+    }>flash_memory
+    
+      
+      GROUP :  {
+            /* map consecutively .ramcode, .sdata0, .acfls_code, .sdata and .data sections */
+            .ramcode(TEXT) ALIGN(4) LOAD(_load_ramcode) : {}
+            .sdata0(DATA) ALIGN(4) LOAD( ADDR(.sdata0) - ADDR(.ramcode) + _load_ramcode) : {}
+            .sdabase ALIGN(8) LOAD( ADDR(.sdabase) - ADDR(.ramcode) + _load_ramcode) : {}
+            .sdata (DATA) ALIGN(4) LOAD( ADDR(.sdata) - ADDR(.ramcode) + _load_ramcode) : {}
+            .data (DATA) ALIGN(4) LOAD( ADDR(.data) - ADDR(.ramcode) + _load_ramcode) : {}
+            .mcal_data (DATA) LOAD( ADDR(.mcal_data) - ADDR(.ramcode) + _load_ramcode) : {}
+    }>int_sram
+      
+      GROUP : {
+            .sbss0(BSS) ALIGN(4): {}
+            .sbss (BSS) ALIGN(4): {}
+            .bss  (BSS) ALIGN(4): {}
+            .mcal_bss  (BSS) : {}
+    }>int_sram
+   
+    GROUP :  {
+                .acfls_code_ram(TEXT) ALIGN(4): {}
+    }>res_ram
+
+      GROUP :  {
+            
+            .mcal_data_no_cacheable (DATA) ALIGN(4) LOAD( ADDR(.mcal_data_no_cacheable)- ADDR(.ramcode) + _load_ramcode) : {}
+          
+    }>int_sram_no_cacheable
+    
+      GROUP : {
+            .mcal_bss_no_cacheable  (BSS) ALIGN(4): {}
+    }>int_sram_no_cacheable
+
+    __IV_ADDR                   = ADDR(flash_vec);
+                        
+    INT_SRAM_START              = ADDR(int_sram);
+    INT_SRAM_SIZE               = 0x80000/64;
+    SBSS_SRAM_START     = ADDR(.sbss);
+    SBSS_SRAM_SIZE      = (SIZEOF(.sbss)+3)/4;
+    BSS_SRAM_START      = ADDR(.bss);
+    BSS_SRAM_SIZE               = (SIZEOF(.bss)+SIZEOF(.mcal_bss_no_cacheable)+3)/4;
+    SDATA_RW_START              = _SDA_BASE_;
+    SDATA_RO_START              = _SDA2_BASE_;
+
+    BSS_NO_CACHEABLE_SRAM_START      = ADDR(.mcal_bss_no_cacheable);
+    BSS_NO_CACHEABLE_SRAM_SIZE       = (SIZEOF(.mcal_bss_no_cacheable)+3)/4;
+  
+    /* generate symbols used in start-up code to init .ramcode section */
+    RC_RAMCODE_SRC =  _load_ramcode;
+    RC_RAMCODE_DEST = ADDR(.ramcode);
+    RC_RAMCODE_SIZE = (SIZEOF(.ramcode)+3) / 4;
+
+    /* generate symbols used in start-up code to init .sdata0 section */
+    RC_PPC_SDATA2_SRC  = ADDR(.sdata0) - ADDR(.ramcode) + _load_ramcode;
+    RC_PPC_SDATA2_DEST  = ADDR(.sdata0);
+    RC_PPC_SDATA2_SIZE  = (SIZEOF(.sdata0)+3) / 4;
+
+
+    /* generate symbols used in start-up code to init .sdata section */
+    RC_SDATA_SRC       = ADDR(.sdata) - ADDR(.ramcode) + _load_ramcode;
+    RC_SDATA_DEST       = ADDR(.sdata);
+    RC_SDATA_SIZE       = (SIZEOF(.sdata)+3) / 4;
+
+     /* generate symbols used in start-up code to init .data section */
+    RC_DATA_SRC         = ADDR(.data) - ADDR(.ramcode) + _load_ramcode;
+    RC_DATA_DEST        = ADDR(.data);
+    RC_DATA_SIZE                = (SIZEOF(.data)+3) / 4 + (SIZEOF(.mcal_data)+3) / 4;
+
+    /* generate symbols used in start-up code to init .mcal_data_no_cacheable section */
+    RC_DATA_NO_CACHEABLE_SRC    = ADDR(.mcal_data_no_cacheable) - ADDR(.ramcode) + _load_ramcode;
+    RC_DATA_NO_CACHEABLE_DEST   = ADDR(.mcal_data_no_cacheable);
+    RC_DATA_NO_CACHEABLE_SIZE   = (SIZEOF(.mcal_data_no_cacheable)+3) / 4;
+
+    
+    __SP_INIT           = ADDR(iram_stack) + SIZEOF(iram_stack);
+    __SP_END            = ADDR(iram_stack);
+    __STACK_SIZE        = SIZEOF(iram_stack);
+
+    __RAM_NO_CACHEABLE_START    = ADDR(int_sram_no_cacheable);
+    __RAM_NO_CACHEABLE_END      = ADDR(int_sram_no_cacheable)+0x1DFFF;
+    __RAM_CACHEABLE_START       = ADDR(int_sram);
+    __RAM_CACHEABLE_END         = ADDR(int_sram)+0x61FFF;
+
+
+    /* Fls module access code support */    
+    Fls_ACEraseRomStart         = ADDR(.acfls_code_rom);
+    Fls_ACEraseRomEnd           = ADDR(.acfls_code_rom) + SIZEOF(.acfls_code_rom);
+    Fls_ACEraseSize             = (SIZEOF(.acfls_code_rom)+3) / 4; /* Copy 4 bytes at a time*/
+
+    Fls_ACWriteRomStart         = ADDR(.acfls_code_rom);
+    Fls_ACWriteRomEnd           = ADDR(.acfls_code_rom) + SIZEOF(.acfls_code_rom);
+    Fls_ACWriteSize             = (SIZEOF(.acfls_code_rom)+3) / 4; /* Copy 4 bytes at a time*/
+
+    _ERASE_FUNC_ADDRESS_        = ADDR(.acfls_code_ram);
+    _WRITE_FUNC_ADDRESS_        = ADDR(.acfls_code_ram);
+
+}

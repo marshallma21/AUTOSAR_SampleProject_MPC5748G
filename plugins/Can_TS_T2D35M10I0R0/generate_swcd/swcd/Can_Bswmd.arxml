@@ -1,0 +1,1092 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3_STRICT_COMPACT.xsd">
+  
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Can</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>Can</SHORT-NAME>
+              <MODULE-ID>80</MODULE-ID>
+              <PROVIDED-ENTRYS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_AbortMb</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_ChangeBaudrate</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_CheckBaudrate</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_CheckWakeup</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_DisableControllerInterrupts</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_DummyRead</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_EnableControllerInterrupts</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_FlexCan_MainFunctionMultipleReadPoll</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_FlexCan_MainFunctionMultipleWritePoll</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_Init</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_BusOff</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_CheckMRAF</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Mode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_0</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_1</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_10</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_2</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_3</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_4</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_5</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_6</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_7</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_8</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_9</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_0</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_1</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_10</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_2</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_3</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_4</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_5</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_6</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_7</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_8</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_9</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_SetClockMode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_SetControllerMode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_Write</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Wakeup</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </PROVIDED-ENTRYS>
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>InternalBehavior_0</SHORT-NAME>
+                  <EXCLUSIVE-AREAS>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_00</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_01</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_02</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_04</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_05</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_06</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_07</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_08</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_11</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_13</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                  </EXCLUSIVE-AREAS>
+                  <ENTITYS>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_AbortMb</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_AbortMb</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_ChangeBaudrate</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_ChangeBaudrate</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_CheckBaudrate</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_CheckBaudrate</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_CheckWakeup</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_CheckWakeup</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_DisableControllerInterrupts</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_DisableControllerInterrupts</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_DummyRead</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_DummyRead</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_EnableControllerInterrupts</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_EnableControllerInterrupts</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_FlexCan_MainFunctionMultipleReadPoll</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_FlexCan_MainFunctionMultipleReadPoll</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_FlexCan_MainFunctionMultipleWritePoll</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_FlexCan_MainFunctionMultipleWritePoll</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_GetVersionInfo</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_Init</SHORT-NAME>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_00</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_01</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_02</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_04</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_05</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_06</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_07</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_08</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_11</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_13</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_Init</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_MainFunction_BusOff</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_BusOff</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_CheckMRAF</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_CheckMRAF</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_MainFunction_Mode</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Mode</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_MainFunction_Read</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_0</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_0</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_1</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_10</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_10</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_2</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_2</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_3</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_3</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_4</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_4</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_5</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_5</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_6</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_6</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_7</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_7</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_8</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_8</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Read_9</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Read_9</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_MainFunction_Write</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_0</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_0</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_1</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_1</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_10</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_10</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_2</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_2</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_3</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_3</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_4</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_4</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_5</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_5</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_6</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_6</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_7</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_7</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_8</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_8</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_MainFunction_Write_9</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Write_9</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY> 
+                      <SHORT-NAME>Can_SetClockMode</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_SetClockMode</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_SetControllerMode</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_SetControllerMode</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_Write</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_Write</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>Can_MainFunction_Wakeup</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can/BswModuleEntrys/Can_MainFunction_Wakeup</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                  </ENTITYS>
+                  <EVENTS>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanFlexCanMultipleReadPollTimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_FlexCan_MainFunctionMultipleReadPoll</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanFlexCanMainFunctionMultipleReadPollPeriod</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanFlexCanMultipleWritePollTimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_FlexCan_MainFunctionMultipleWritePoll</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanFlexCanMainFunctionMultipleWritePollPeriod</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanBusOffTimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_BusOff</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionBusOffPeriod</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanCheckMRAFTimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_CheckMRAF</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionCheckMRAFPeriod</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanModeTimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Mode</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionModePeriod</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanReadTimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionReadPeriod</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead0TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_0</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead0Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead1TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_1</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead1Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead10TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_10</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead10Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead2TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_2</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead2Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead3TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_3</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead3Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead4TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_4</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead4Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead5TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_5</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead5Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead6TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_6</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead6Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead7TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_7</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead7Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead8TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_8</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead8Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanRead9TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Read_9</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionRead9Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWriteTimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWritePeriod</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite0TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_0</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite0Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite1TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_1</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite1Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite10TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_10</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite10Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite2TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_2</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite2Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite3TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_3</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite3Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite4TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_4</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite4Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite5TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_5</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite5Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite6TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_6</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite6Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite7TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_7</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite7Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite8TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_8</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite8Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWrite9TimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Write_9</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWrite9Period</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT>
+                          <SHORT-NAME>CanWakeupTimingEvent_MainFunction</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_can/BswModuleDescriptions/can/InternalBehavior_0/Can_MainFunction_Wakeup</STARTS-ON-EVENT-REF>
+                          <PERIOD>CanMainFunctionWakeupPeriod</PERIOD>
+                        </BSW-TIMING-EVENT>
+                  </EVENTS>
+                </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+                      
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+          <ELEMENTS>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_AbortMb</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_ChangeBaudrate</SHORT-NAME>
+                <SERVICE-ID>0x0d</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_CheckBaudrate</SHORT-NAME>
+                <SERVICE-ID>0x0e</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_CheckWakeup</SHORT-NAME>
+                <SERVICE-ID>0x0b</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_DisableControllerInterrupts</SHORT-NAME>
+                <SERVICE-ID>0x04</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_DummyRead</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_EnableControllerInterrupts</SHORT-NAME>
+                <SERVICE-ID>0x05</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_FlexCan_MainFunctionMultipleReadPoll</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_FlexCan_MainFunctionMultipleWritePoll</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_GetVersionInfo</SHORT-NAME>
+                <SERVICE-ID>0x07</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_Init</SHORT-NAME>
+                <SERVICE-ID>0x00</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_BusOff</SHORT-NAME>
+                <SERVICE-ID>0x09</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_CheckMRAF</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Mode</SHORT-NAME>
+                <SERVICE-ID>0x0c</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read</SHORT-NAME>
+                <SERVICE-ID>0x08</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_0</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_1</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_10</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_2</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_3</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_4</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_5</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_6</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_7</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_8</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Read_9</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write</SHORT-NAME>
+                <SERVICE-ID>0x01</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_0</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_1</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_10</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_2</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_3</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_4</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_5</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_6</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_7</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_8</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Write_9</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_SetClockMode</SHORT-NAME>
+                <SERVICE-ID>0</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_SetControllerMode</SHORT-NAME>
+                <SERVICE-ID>0x03</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_Write</SHORT-NAME>
+                <SERVICE-ID>0x06</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Can_MainFunction_Wakeup</SHORT-NAME>
+                <SERVICE-ID>0x0a</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>Can_T2D35M10I0R0</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+        <SHORT-NAME>Implementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+              <SHORT-NAME>BswImplementation_0</SHORT-NAME>
+
+            <CODE-DESCRIPTORS>
+              <CODE>
+              <SHORT-NAME>Files</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>config::Can.xdm</SHORT-LABEL>
+                  <CATEGORY>SWCFG</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>doc::AUTOSAR_MCAL_CAN_IM.pdf</SHORT-LABEL>
+                  <CATEGORY>SWDOC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>doc::AUTOSAR_MCAL_CAN_UM.pdf</SHORT-LABEL>
+                  <CATEGORY>SWDOC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>include::Can.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>include::Can_Flexcan.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>include::Can_IPW.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>include::Reg_eSys_FlexCan.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>src::Can.c</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>src::Can_Flexcan.c</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>src::Can_Irq.c</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+              </CODE>
+            </CODE-DESCRIPTORS>
+
+            <COMPILERS>
+              <COMPILER>
+                <SHORT-NAME>DIAB_Compiler</SHORT-NAME>
+                <NAME>Windriver Diab</NAME>
+                <OPTIONS>-tPPCE200Z4204N3VEN:simple -tPPCE200Z210N3VEN:simple -Xdialect-ansi -XO -g3 -Xsize-opt -Xsmall-data=0 -Xsmall-const=0 -Xaddr-sconst=0x11 -Xaddr-sdata=0x11 -Xno-common -Xnested-interrupts -Xdebug-dwarf2 -Xdebug-local-all -Xdebug-local-cie -Xdebug-struct-all -Xforce-declarations -ee1481 -Xmacro-undefined-warn -Xlink-time-lint -W:as:,-l  -Wa,-Xisa-vle -DAUTOSAR_OS_NOT_USED -DUSE_SW_VECTOR_MODE -DDIAB -DDISABLE_MCAL_INTERMODULE_ASR_CHECK -c</OPTIONS>
+                <VENDOR>Windriver</VENDOR>
+                <VERSION>Windriver DIAB DIAB_5_9_6_2</VERSION>
+              </COMPILER>
+              <COMPILER>
+                <SHORT-NAME>GHS_Compiler</SHORT-NAME>
+                <NAME>Green Hills</NAME>
+                <OPTIONS>-cpu=ppc5748gz4204 -cpu=ppc5748gz210 -ansi -noSPE -Ospace -sda=0 -vle -dual_debug -G --no_exceptions -Wundef -Wimplicit-int -Wshadow -Wtrigraphs --prototype_errors --incorrect_pragma_warnings -noslashcomment -preprocess_assembly_files -nostartfile --short_enum --diag_error 223 -DAUTOSAR_OS_NOT_USED -DUSE_SW_VECTOR_MODE -DDISABLE_MCAL_INTERMODULE_ASR_CHECK -DGHS -c</OPTIONS>
+                <VENDOR>Green Hills</VENDOR>
+                <VERSION>Green Hills Multi 7.1.4 / Compiler 2015.1.6</VERSION>
+              </COMPILER>
+            </COMPILERS>
+            <GENERATED-ARTIFACTS>
+              <DEPENDENCY-ON-ARTIFACT>
+                <SHORT-NAME>Can_PBcfg_c</SHORT-NAME>
+                <ARTIFACT-DESCRIPTOR>
+                  <SHORT-LABEL>generate_PB::src::Can_PBcfg.c</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </ARTIFACT-DESCRIPTOR>
+                <USAGES>
+                  <USAGE>COMPILE</USAGE>
+                </USAGES>
+              </DEPENDENCY-ON-ARTIFACT>
+              <DEPENDENCY-ON-ARTIFACT>
+                <SHORT-NAME>Can_Cfg_h</SHORT-NAME>
+                <ARTIFACT-DESCRIPTOR>
+                  <SHORT-LABEL>generate_PC::include::Can_Cfg.h</SHORT-LABEL>
+                  <CATEGORY>SWHDR</CATEGORY>
+                </ARTIFACT-DESCRIPTOR>
+                <USAGES>
+                  <USAGE>COMPILE</USAGE>
+                </USAGES>
+              </DEPENDENCY-ON-ARTIFACT>
+              <DEPENDENCY-ON-ARTIFACT>
+                <SHORT-NAME>Can_Cfg_c</SHORT-NAME>
+                <ARTIFACT-DESCRIPTOR>
+                  <SHORT-LABEL>generate_PC::src::Can_Cfg.c</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </ARTIFACT-DESCRIPTOR>
+                <USAGES>
+                  <USAGE>COMPILE</USAGE>
+                </USAGES>
+              </DEPENDENCY-ON-ARTIFACT>
+            </GENERATED-ARTIFACTS>
+
+            <LINKERS>
+              <LINKER>
+                <SHORT-NAME>DIAB_Linker</SHORT-NAME>
+                <NAME>Windriver Diab</NAME>
+                <OPTIONS>-tPPCE200Z4204N3VEN:simple -tPPCE200Z210N3VEN:simple -Xelf -m6 -Xlink-time-lint</OPTIONS>
+                <VENDOR>Windriver</VENDOR>
+                <VERSION>Windriver DIAB DIAB_5_9_6_2</VERSION>
+              </LINKER>
+              <LINKER>
+                <SHORT-NAME>GHS_Linker</SHORT-NAME>
+                <NAME>Green Hills</NAME>
+                <OPTIONS>-cpu=ppc5748gz4204  -cpu=ppc5748gz210  -nostartfiles -vle --nocpp -Mn -delete -ignore_debug_references -keepmap</OPTIONS>
+                <VENDOR>Green Hills</VENDOR>
+                <VERSION>Green Hills Multi 7.1.4 / Compiler 2015.1.6</VERSION>
+              </LINKER>
+            </LINKERS> 
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION>
+                <SHORT-NAME>ResourceConsumption</SHORT-NAME>
+                <MEMORY-SECTIONS>
+                </MEMORY-SECTIONS>
+              </RESOURCE-CONSUMPTION>
+              <SW-VERSION>1.0.0</SW-VERSION>
+              <VENDOR-ID>43</VENDOR-ID>
+              <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+              
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Can/BswModuleDescriptions/Can/InternalBehavior_0</BEHAVIOR-REF>
+              <PRECONFIGURED-CONFIGURATION-REFS>
+              </PRECONFIGURED-CONFIGURATION-REFS>
+              <RECOMMENDED-CONFIGURATION-REFS>
+              </RECOMMENDED-CONFIGURATION-REFS>
+              <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/TS_T2D35M10I0R0/Can</VENDOR-SPECIFIC-MODULE-DEF-REF>
+              </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,2993 @@
+<?xml version='1.0'?>
+<datamodel version="3.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+<!--
+*   @file    FrIf.xdm
+*   @version 1.0.0
+*
+*   @brief   AUTOSAR FrIf - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and FrIf Tresos Studio plugin.
+-->
+<!--
+====================================================================================================
+*   Project              : AUTOSAR 4.2 MCAL
+*   Platform             : PA
+*   Peripheral           : FLEXRAY
+*   Dependencies         : none
+*
+*   Autosar Version      : 4.2.2
+*   Autosar Revision     : ASR_REL_4_2_REV_0002
+*   Autosar Conf.Variant :
+*   SW Version           : 1.0.0
+*   Build Version        : MPC574XG_MCAL_1_0_0_RTM_ASR_REL_4_2_REV_0002_20170217
+
+*   (c) Copyright 2006-2016 Freescale Semiconductor, Inc. 
+*       Copyright 2017 NXP
+*   All Rights Reserved.
+====================================================================================================
+====================================================================================================
+====================================================================================================
+-->    
+  <d:ctr type="AUTOSAR" factory="autosar" 
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd" >
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="TS_T2D35M10I0R0" type="AR-PACKAGE">
+        <a:a name="UUID" value="ECUC:9a14b70a-8a98-43a7-ad3b-59fcdbc1c9ce"/>
+        <d:lst type="ELEMENTS">
+          <d:chc name="FrIf" type="AR-ELEMENT" value="MODULE-DEF">
+            <v:ctr type="MODULE-DEF">
+              <d:ref type="REFINED_MODULE_DEF" value="ASPath:/AUTOSAR/EcucDefs/FrIf"/>
+              <a:a name="RELEASE" value="asc:4.2"/>
+              <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                <ad:ADMIN-DATA>
+                  <ad:DOC-REVISIONS>
+                    <ad:DOC-REVISION>
+                      <ad:REVISION-LABEL>4.1.0</ad:REVISION-LABEL>
+                      <ad:ISSUED-BY>AUTOSAR</ad:ISSUED-BY>
+                      <ad:DATE>2010-12-03</ad:DATE>
+                    </ad:DOC-REVISION>
+                  </ad:DOC-REVISIONS>
+                </ad:ADMIN-DATA>
+              </a:a>
+                <a:a name="DESC">
+                <a:v><![CDATA[EN:
+                  <html>Configuration of the FrIf (FlexRay Interface) module.</html>
+                ]]></a:v>
+              </a:a>
+              <a:a name="LOWER-MULTIPLICITY" value="1"/>
+              <a:a name="UPPER-MULTIPLICITY" value="1"/>
+              <a:a name="UUID" value="ECUC:d16d1e0c-a3bd-42f0-a122-30f76b3b9dbc"/>
+              <a:a name="POSTBUILDVARIANTSUPPORT" value="true"/>
+              <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                <a:a name="LABEL" value="Config Variant"/>
+                <a:a name="UUID" value="ECUC:7c4bcece-3cf6-4c01-9598-3c61ed321af2"/>
+                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v class="PreCompile">VariantLinkTime</icc:v>
+                </a:a>
+                <a:da name="DEFAULT" value="VariantLinkTime"/>
+                <a:da name="RANGE">
+                  <a:v>VariantLinkTime</a:v>
+                  <a:v>VariantPostBuild</a:v>
+                  <a:v>VariantPreCompile</a:v>
+                </a:da>
+              </v:var>
+              <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                <a:a name="LABEL" value="Common Published Information"/>
+                <a:a name="DESC">
+                  <a:v><![CDATA[EN: 
+                      <html>Common container, aggregated by all modules. It contains published information about vendor and versions.</html>
+                  ]]></a:v>
+                </a:a>
+                <a:a name="UUID" value="ECUC:52a36521-3690-44c9-92c0-355ee646ead7"/>
+                <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                  <a:a name="LABEL" value="AUTOSAR Major Version"/>
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN: 
+                      <html>Major version number of AUTOSAR specification on which the appropriate implementation is based on.</html>
+                      ]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:2d76444e-af14-4be9-bd17-fd36476894f8"/>
+                  <a:da name="DEFAULT" value="4"/>                       
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=4"/>
+                    <a:tst expr="&lt;=4"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                  <a:a name="LABEL" value="AUTOSAR Minor Version"/>
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN: 
+                      <html>Minor version number of AUTOSAR specification on which the appropriate implementation is based on.</html>
+                      ]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:f552ffbd-e089-407b-9583-5c58e44e3572"/>
+                  <a:da name="DEFAULT" value="2"/>                       
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=2"/>
+                      <a:tst expr="&lt;=2"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                  <a:a name="LABEL" value="AUTOSAR Release Revision Version"/>
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN: 
+                      <html>Revision version number of AUTOSAR specification on which the appropriate implementation is based on.</html>
+                      ]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:0de8997b-e63a-4444-8ba5-c3e3d247f054"/>
+                  <a:da name="DEFAULT" value="2"/>                       
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=2"/>
+                      <a:tst expr="&lt;=2"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="ModuleId" type="INTEGER_LABEL">
+                  <a:a name="LABEL" value="Numeric Module ID"/>
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN: 
+                      <html>Module ID of this module from Module List.</html>
+                      ]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:418227ee-163a-4e14-8978-0b985670b82f"/>
+                  <a:da name="DEFAULT" value="61"/>
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=61"/>
+                      <a:tst expr="&lt;=61"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                  <a:a name="LABEL" value="Software Major Version"/>
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN: 
+                      <html>Major version number of the vendor specific implementation of the module. The numbering is vendor specific.</html>
+                      ]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:aa613358-f06c-4aa7-83ab-7c5617d750b0"/>
+                  <a:da name="DEFAULT" value="1"/>
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=1"/>
+                      <a:tst expr="&lt;=1"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                  <a:a name="LABEL" value="Software Minor Version"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN: 
+                    <html>Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.</html>
+                    ]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:b369a606-8272-4388-a792-c2d71a2aa570"/>
+                  <a:da name="DEFAULT" value="0"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=0"/>
+                    <a:tst expr="&lt;=0"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                  <a:a name="LABEL" value="Software Patch Version"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN: 
+                    <html>Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.</html>
+                    ]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:d0222921-894b-4660-bd66-3244f42f3c24"/>
+                  <a:da name="DEFAULT" value="0"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=0"/>
+                    <a:tst expr="&lt;=0"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="VendorApiInfix" type="STRING_LABEL">
+                  <a:a name="LABEL" value="VendorApiInfix"/>
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN: 
+                      In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name. 
+                      This parameter is used to specify the vendor specific name. In total, the implementation specific name is generated as follows:
+                      &lt;ModuleName&gt;_&gt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                      E.g.  assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of &quot;v11r456&quot; a api name Can_Write defined in the SWS will translate to Can_123_v11r456Write. 
+                      This parameter is mandatory for all modules with upper multiplicity &gt; 1. It shall not be used for modules with upper multiplicity =1.]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:fbe7650e-d75f-4aa8-a700-cf271321ca63"/>
+                  <a:da name="DEFAULT" value=""/>
+                  <a:a name="OPTIONAL" value="true"/>
+                  <a:da name="ENABLE" value="false"/>
+                </v:var>
+                <v:var name="VendorId" type="INTEGER_LABEL">
+                    <a:a name="LABEL" value="Vendor ID"/>
+                    <a:a name="DESC">
+                        <a:v><![CDATA[EN: 
+                          <html>Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.</html>
+                        ]]></a:v>
+                    </a:a>              
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                      <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                      <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                      <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                    </a:a>
+                    <a:a name="ORIGIN" value="NXP"/>
+                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:442c15b1-052a-4da5-b8fe-7ad81a6531d4"/>
+                    <a:da name="DEFAULT" value="43"/>
+                    <a:da name="INVALID" type="Range">
+                        <a:tst expr="&gt;=43"/>
+                        <a:tst expr="&lt;=43"/>
+                    </a:da>                    
+                </v:var>
+              </v:ctr>
+              <v:ctr name="FrIfConfig" type="IDENTIFIABLE">
+                  <a:a name="LABEL" value="FrIfConfig"/>
+                  <a:a name="DESC">
+                   <a:v><![CDATA[EN:
+                     <html> Configuration of the FlexRay Interface. This container is a MultipleConfigurationContainer, i.e. this container and its sub-containers exist once per configuration set.</html>
+                   ]]></a:v>
+                  </a:a> 
+                  <a:a name="UUID" value="ECUC:c764e02c-b9c8-43da-b910-0da4af9b4151"/>
+                  <v:var name="FrIfMaxPduCnt" type="INTEGER">
+                    <a:a name="DESC" 
+                         value="EN: Maximum number of Pdus. This parameter is needed only in case of post-build loadable implementation using static memory allocation."/>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                         type="IMPLEMENTATIONCONFIGCLASS">
+                      <icc:v mclass="Link">VariantLinkTime</icc:v>
+                      <icc:v mclass="Link">VariantPostBuild</icc:v>
+                      <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                      <icc:v vclass="Link">VariantLinkTime</icc:v>
+                      <icc:v vclass="Link">VariantPostBuild</icc:v>
+                      <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:a name="OPTIONAL" value="true"/>
+                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                    <a:a name="SCOPE" value="LOCAL"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" 
+                         value="ECUC:88404790-3f2e-4e63-bdcb-d64c84a94d9d"/>
+                    <a:da name="ENABLE" value="false"/>
+                    <a:da name="INVALID" type="Range">
+                      <a:tst expr="&lt;=9223372036854775807"/>
+                      <a:tst expr="&gt;=0"/>
+                    </a:da>
+                  </v:var>
+                  <v:lst name="FrIfCluster" type="MAP">
+                    <a:da name="MIN" value="1"/>
+                    <v:ctr name="FrIfCluster" type="IDENTIFIABLE">
+                      <a:a name="LABEL" value="FrIfCluster"/>
+                      <a:a name="DESC">
+                        <a:v><![CDATA[EN:
+                           <html> This container specifies a FrIf Cluster and all related data which is required to enable communication of the Cluster. A Cluster may consist of more than one Controller.</html> 
+                          ]]></a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                        <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="UUID" value="ECUC:c527276a-4252-43ff-8a9c-ce21beae7382"/>
+                      <v:var name="FrIfClstIdx" type="INTEGER">
+                        <a:a name="LABEL" value="FrIfClstIdx"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                             <html> This parameter provides a zero-based consecutive index of the FlexRay Clusters. Upper layer BSW modules and the FrIf itself use this index to identify a FlexRay Cluster.</html> 
+                            ]]></a:v>
+                          </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                        <a:a name="UUID" value="ECUC:3b92fb5c-797e-4a04-98b8-7a2ff99762f9"/>
+                        <a:da name="DEFAULT" value="0"/>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=63"/>
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfDetectNITError" type="BOOLEAN">
+                        <a:a name="LABEL" value="FrIfDetectNITError"/>                 
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Indicates whether NIT error status of each cluster shall be detected or not.</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:268a1489-4dee-4e06-a3fb-cf800b8fb3b5"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="false"/>
+                      </v:var>
+                      <v:var name="FrIfGChannels" type="ENUMERATION">
+                        <a:a name="LABEL" value="gChannels" />
+                          <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>The channels that are used by the cluster.
+                                <br>Implementation Type: Fr_ChannelType
+                            </html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:cec987a1-2ea8-4d4d-99b1-f7f63c15f709"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="FR_CHANNEL_AB" />
+                        <a:da name="RANGE">
+                          <a:v>FR_CHANNEL_A</a:v>
+                          <a:v>FR_CHANNEL_AB</a:v>
+                          <a:v>FR_CHANNEL_B</a:v>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGColdStartAttempts" type="INTEGER">
+                        <a:a name="LABEL" value="gColdStartAttempts" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Maximum number of times a node in the cluster is permitted to attempt to start the cluster by initiating schedule synchronization</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:6635a670-f298-4866-9d4c-71a1940172af"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="10" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=31"/>
+                          <a:tst expr="&gt;=2"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGCycleCountMax" type="INTEGER">
+                        <a:a name="LABEL" value="gCycleCountMax" />                        
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Maximum cycle counter value in a given cluster. It must be an odd integer.</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:8bba2c86-029f-4f5b-ad87-71ba4303eb24"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="63"/>
+                        <a:a name="EDITABLE" value="false"/> <!-- This 3.0 feature is not supported by the 2.1 controller -->
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=63"/>
+                          <a:tst expr="&gt;=7"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGListenNoise" type="INTEGER">
+                        <a:a name="LABEL" value="gListenNoise"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                             <html> Upper limit for the start up listen timeout and wake up listen timeout in the presence of noise. It is used as a multiplier of the cluster parameter pdListenTimeout.</html> 
+                            ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:be2cf628-df70-4937-997e-c920d8f1b407"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="2"/>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=16"/>
+                          <a:tst expr="&gt;=2"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGMacroPerCycle" type="INTEGER">
+                        <a:a name="LABEL" value="gMacroPerCycle [MT]"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                             <html>Number of macroticks in a communication cycle.</html> 
+                            ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:3d9d4c3c-99e7-41b3-9ee2-a940100ea9ca"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="5000"/>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=16000"/>
+                          <a:tst expr="&gt;=8"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGMaxWithoutClockCorrectFatal" type="INTEGER">
+                        <a:a name="LABEL" value="gMaxWithoutClockCorrectionFatal [even/odd cycle pairs]"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                             <html> Threshold used for testing the vClockCorrectionFailed counter. Defines the number of consecutive even/odd Cycle pairs with missing clock correction terms that will cause the protocol to transition from the POC:normal active or POC:normal passive state into the POC:halt state. [Even/odd cycle pairs].</html> 
+                            ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:eca5a3b4-4386-4370-982e-8f2d7810c45a"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="14"/>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=15"/>
+                          <a:tst expr="&gt;=1"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGMaxWithoutClockCorrectPassive" type="INTEGER">
+                        <a:a name="LABEL" value="gMaxWithoutClockCorrectionPassive [even/odd cycle pairs]"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                             <html> Threshold used for testing the vClockCorrectionFailed counter. Defines the number of consecutive even/odd Cycle pairs with missing clock correction terms that will cause the protocol to transition from the POC:normal active state to the POC:normal passive state. [Even/Odd cycle pairs]</html> 
+                            ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:f81148e6-3bd7-4deb-8882-86e4cbd4d1a4"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="10"/>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=15"/>
+                          <a:tst expr="&gt;=1"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGNetworkManagementVectorLength" type="INTEGER">
+                        <a:a name="LABEL" value="gNetworkManagementVectorLength [bytes]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                             <html> Length of the Network Management vector in a cluster [bytes]</html> 
+                            ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:8fe6027a-2cd1-481d-81a5-912165230991"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="2" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=12"/>
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGNumberOfMinislots" type="INTEGER">
+                        <a:a name="LABEL" value="gNumberOfMinislots" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Number of minislots in the dynamic segment</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:1a4104c0-124e-4a74-ba8e-a6de519c5259"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="163" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=7988"/>
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGNumberOfStaticSlots" type="INTEGER">
+                        <a:a name="LABEL" value="gNumberOfStaticSlots"/>
+                          <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Number of static slots in the static segment</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:b226b5a3-90e1-4d4b-a391-3a791a5a3802"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="60"/>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=1023"/>
+                          <a:tst expr="&gt;=2"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGPayloadLengthStatic" type="INTEGER">
+                        <a:a name="LABEL" value="gPayloadLengthStatic [16 bit words]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Payload length of a static frame [16 bit words]</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:ca61fa50-b1cb-4af2-b0ec-6d2b5315aded"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="16" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=127"/>
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGSyncFrameIDCountMax" type="INTEGER">
+                        <a:a name="LABEL" value="gSyncFrameIDCountMax" />                       
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Maximum number of distinct syncframe identifiers present in a  given cluster. This parameter maps to FlexRay Protocol 2.1 Rev. A parameter gSyncNodeMax.</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:c92c022e-f217-4fc9-84f9-e0c930707749"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="5" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=15"/>
+                          <a:tst expr="&gt;=2"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdActionPointOffset" type="INTEGER">
+                        <a:a name="LABEL" value="gdActionPointOffset [MT]"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Number of macroticks the action point is offset from the beginning of a static slot.</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:1391c848-b4b5-4f3b-969e-ba3f1fa891bc"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="ECU"/>
+                        <a:da name="DEFAULT" value="6" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=63"/>
+                          <a:tst expr="&gt;=1"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdBit" type="ENUMERATION">
+                        <a:a name="LABEL" value="gdBit [seconds]" />
+                          <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Nominal bit time in seconds</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:dd55ccb5-f417-4231-a013-10b8f8df5318"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="T100NS"/>
+                        <a:da name="RANGE">
+                          <a:v>T100NS</a:v>
+                          <a:v>T200NS</a:v>
+                          <a:v>T400NS</a:v>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdCasRxLowMax" type="INTEGER">
+                        <a:a name="LABEL" value="gdCASRxLowMax [gdBit]" />
+                          <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Upper limit of the CAS acceptance windows [gdBit]</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:f28b07c9-e035-49e2-ade2-2fa680ffc871"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="91" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=254"/>
+                          <a:tst expr="&gt;=28"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdCycle" type="FLOAT">
+                        <a:a name="LABEL" value="gdCycle [seconds]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Length of the cycle, expressed in [s]</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:13091d94-5246-4107-b21d-588ec102a350"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="5E-3" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=0.016"/>
+                          <a:tst expr="&gt;=2.4E-5"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdDynamicSlotIdlePhase" type="INTEGER">
+                        <a:a name="LABEL" value="gdDynamicSlotIdlePhase [Minislots]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Duration of the idle phase within a dynamic slot [Minislots].</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:68f30ae3-525a-4286-8137-e6cf563d33f0"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="1" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=2"/>
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdIgnoreAfterTx" type="INTEGER">
+                        <a:a name="LABEL" value="gdIgnoreAfterTx [gdBit]"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Duration for which the bitstrobing is paused after transmission [gdBit].</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:848aaa6e-784f-428b-9aa9-7f22b36d00d6"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="0"/>
+                        <a:a name="EDITABLE" value="false"/> <!-- This 3.0 feature is not supported by the 2.1 controller -->
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=15"/>
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdMacrotick" type="FLOAT">
+                        <a:a name="LABEL" value="gdMacrotick [seconds]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Duration of the cluster wide nominal macrotick, expressed in s</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:1d6e0ab7-aab7-444c-bd00-6d45136e42cd"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="1.0E-6" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=6.0E-6"/>
+                          <a:tst expr="&gt;=1.0E-6"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdMiniSlotActionPointOffset" type="INTEGER">
+                        <a:a name="LABEL" value="gdMiniSlotActionPointoffset [MT]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Number of Macroticks the Minislot action point is offset from the beginning of a Minislot [Macroticks].</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:0ed2ed4f-58d4-4f62-9b92-2ffb821c3be5"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="3" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=31"/>
+                          <a:tst expr="&gt;=1"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdMinislot" type="INTEGER">
+                        <a:a name="LABEL" value="gdMinislot [MT]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Duration of a minislot [Macroticks]</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:bbe3ec3a-cdcb-4120-9b59-219af8a60379"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="ECU"/>
+                        <a:da name="DEFAULT" value="6" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=63"/>
+                          <a:tst expr="&gt;=2"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdNit" type="INTEGER">
+                        <a:a name="LABEL" value="gdNIT [MT]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Duration of the Network Idle Time [Macroticks]</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:2de5aef5-0297-4b8b-959e-d9e0b7d9c2d5"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="103" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=15978"/>
+                          <a:tst expr="&gt;=2"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdSampleClockPeriod" type="ENUMERATION">
+                        <a:a name="LABEL" value="gdSampleClockPeriod [ns]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Sample clock period</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:0c2a8090-06c0-43c8-8a06-d8f77aa7b7e8"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="T12_5NS" />
+                        <a:da name="RANGE">
+                          <a:v>T12_5NS</a:v>
+                          <a:v>T25NS</a:v>
+                          <a:v>T50NS</a:v>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdStaticSlot" type="INTEGER">
+                        <a:a name="LABEL" value="gdStaticSlot [MT]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Duration of a static slot [Macroticks].</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:bb34de05-f667-4619-ac13-a9c77fc9609a"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="65" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=664"/>
+                          <a:tst expr="&gt;=3"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdSymbolWindow" type="INTEGER">
+                        <a:a name="LABEL" value="gdSymbolWindow [MT]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Duration of the symbol window [Macroticks].</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:77ddac65-41ad-4244-b042-c811158951a9"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="19" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=162"/>
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdSymbolWindowActionPointOffset" type="INTEGER">
+                        <a:a name="LABEL" value="gdSymbolWindowActionPointOffset [MT]"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Number of macroticks the action point offset is from the beginning of the symbol window [Macroticks].<br>
+                                  The 2.1 controller is using the value of gdActionPointOffset instead therefore this value is ignored.
+                            </html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:a77dabc7-21aa-47a1-b218-5318d6f6996c"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="6"/> <!-- The value should be bound to FrIfGdActionPointOffset however it cannot be exported into epd  file -->
+                        <a:a name="EDITABLE" value="false"/> <!-- This 3.0 feature is not supported by the 2.1 controller -->
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=63"/>
+                          <a:tst expr="&gt;=1"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdTSSTransmitter" type="INTEGER">
+                        <a:a name="LABEL" value="gdTSSTansmitter [gdBits]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Number of bits in the Transmission Start Sequence [gdBits].</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:156fd95d-e993-421c-b7c6-7620a0a9f0e5"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="11" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=15"/>
+                          <a:tst expr="&gt;=1"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdWakeupRxIdle" type="INTEGER">
+                        <a:a name="LABEL" value="gdWakeupSymbolRxIdle [gdBit]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Number of bits used by the node to test the duration of the &apos;idle&apos; or HIGH phase of a received wakeup [gdBit]. Remarks: This parameter maps to FlexRay Protocol 2.1 Rev. A parameter gdWakeupSymbolRxIdle. Lower limit 14 for FlexRay Protocol 2.1 Rev. A compliance.</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:f083b549-e75c-469c-8b84-18b508ac70fa"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="59" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=59"/>
+                          <a:tst expr="&gt;=8"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdWakeupRxLow" type="INTEGER">
+                        <a:a name="LABEL" value="gdWakeupSymbolRxLow [gdBit]" />
+                          <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Number of bits used by the node to test the duration of the LOW phase of a received wakeup [gdBit].</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:9b740317-bef9-492d-9dc3-0365cc259004"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="55" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=59"/>
+                          <a:tst expr="&gt;=8"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdWakeupRxWindow" type="INTEGER">
+                        <a:a name="LABEL" value="gdWakeupSymbolRxWindow [gdBit]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>The size of the window used to detect wakeups [gdBit].</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:ed77f89e-0ba6-4230-9b12-9ea10372c5a1"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="301" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=485"/>
+                          <a:tst expr="&gt;=76"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdWakeupTxActive" type="INTEGER">
+                        <a:a name="LABEL" value="gdWakeupSymbolTxLow [gdBit]" />
+                          <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Number of bits used by the node to transmit the LOW phase of awakeup symbol and  the HIGH and LOW phases of a WUDOP [gdBit].</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:43fa36c2-760b-4509-842b-fef1ace4b6fa"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="60" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=60"/>
+                          <a:tst expr="&gt;=15"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfGdWakeupTxIdle" type="INTEGER">
+                        <a:a name="LABEL" value="gdWakeupSymbolTxIdle [gdBit]" />
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Number of bits used by the node to transmit the &apos;idle&apos; part of a</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:c0cc612f-35d0-425b-a90a-104ff260f15d"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="180" />
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=180"/>
+                          <a:tst expr="&gt;=45"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfMainFunctionPeriod" type="FLOAT">
+                        <a:a name="LABEL" value="FrIfMainFunctionPeriod"/>
+                        <a:a name="DESC">
+                         <a:v><![CDATA[EN:
+                             <html> The execution cycle of the FrIf_MainFunction_&lt;cluster&gt;() in seconds. The FrIf does not require this information but the BSW scheduler, which invokes the cluster main functions, needs it in order to plan its tasks.</html> 
+                            ]]></a:v>
+                        </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="Link">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:407df602-7095-42b5-b071-c365ea3d4892"/>
+                        <a:da name="DEFAULT" value="0.005"/>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&gt;=0.0"/>
+                          <a:tst expr="&lt;=1.0e9"/>
+                        </a:da>  
+                      </v:var>
+                      <v:var name="FrIfMaxIsrDelay" type="INTEGER">
+                          <a:a name="LABEL" value="FrIfMaxIsrDelay"/>
+                          <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>The maximum delay in macroticks the FrIf_JoblistExec_&lt;cluster&gt;() function is processed after the absolute timer interrupt was triggered.</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:2a05722e-6c30-479a-bc95-5b0e8838e1ab"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="100"/>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=10240000"/> 
+                          <!-- Maximum value of MT in the comunication cycle -->
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+                      <v:var name="FrIfSafetyMargin" type="INTEGER">
+                          <a:a name="LABEL" value="FrIfSafetyMargin"/>
+                          <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Additional timespan in macroticks which takes jitter into account to be able to set the JobListPointer to the next possible job which can be executed in case the FlexRay Job List Execution Function has be resynchronized.</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:35d33668-e4e2-4f86-8d94-77d06515f543"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:da name="DEFAULT" value="100"/>
+                        <a:da name="INVALID" type="Range">
+                          <a:tst expr="&lt;=10240000"/>
+                          <a:tst expr="&gt;=0"/>
+                        </a:da>
+                      </v:var>
+                      <v:ctr name="FrIfClusterDemEventParameterRefs" type="IDENTIFIABLE">
+                        <a:a name="OPTIONAL" value="true"/>
+                        <a:da name="ENABLE" value="false"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter&apos;s DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="UUID" value="ECUC:6f2da592-e069-47f1-9cf3-97f5b4cbb4e5"/>
+                        <v:ref name="FRIF_E_ACS_CH_A" type="SYMBOLIC-NAME-REFERENCE">
+                          <a:a name="OPTIONAL" value="true"/>
+                          <a:da name="ENABLE" value="false"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>Reference to the DemEventParameter which shall be issued when an error in ACS on channel A was detected.</html>
+                            ]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v mclass="Link">VariantLinkTime</icc:v>
+                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="Link">VariantLinkTime</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                          <a:a name="UUID" value="ECUC:38bc169d-6b94-48c3-95da-01fc3280b80d"/>
+                          <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                          <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                          <a:a name="SCOPE" value="LOCAL"/>
+                          <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter"/>
+                        </v:ref>
+                        <v:ref name="FRIF_E_ACS_CH_B" type="SYMBOLIC-NAME-REFERENCE">
+                          <a:a name="OPTIONAL" value="true"/>
+                          <a:da name="ENABLE" value="false"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>Reference to the DemEventParameter which shall be issued when an error in ACS on channel B was detected.</html>
+                            ]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v mclass="Link">VariantLinkTime</icc:v>
+                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="Link">VariantLinkTime</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                          <a:a name="UUID" value="ECUC:dbe96e3e-f6b0-423d-88dd-24534b018607"/>
+                          <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                          <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                          <a:a name="SCOPE" value="LOCAL"/>
+                          <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter"/>
+                        </v:ref>
+                        <v:ref name="FRIF_E_NIT_CH_A" type="SYMBOLIC-NAME-REFERENCE">
+                          <a:a name="OPTIONAL" value="true"/>
+                          <a:da name="ENABLE" value="false"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>Reference to the DemEventParameter which shall be issued when an error in NIT on channel A was detected.</html>
+                            ]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v mclass="Link">VariantLinkTime</icc:v>
+                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="Link">VariantLinkTime</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                          <a:a name="UUID" value="ECUC:bcbb44e9-b1bb-4589-96a5-08db8cde15cd"/>
+                          <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                          <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                          <a:a name="SCOPE" value="LOCAL"/>
+                          <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter"/>
+                        </v:ref>
+                        <v:ref name="FRIF_E_NIT_CH_B" type="SYMBOLIC-NAME-REFERENCE">
+                          <a:a name="OPTIONAL" value="true"/>
+                          <a:da name="ENABLE" value="false"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>Reference to the DemEventParameter which shall be issued when an error in NIT on channel B was detected.</html>
+                            ]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v mclass="Link">VariantLinkTime</icc:v>
+                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="Link">VariantLinkTime</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                          <a:a name="UUID" value="ECUC:ae202655-65b7-4f87-8a1c-a69baf5627a7"/>
+                          <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                          <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                          <a:a name="SCOPE" value="LOCAL"/>
+                          <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter"/>
+                        </v:ref>
+                        <v:ref name="FRIF_E_SW_CH_A" type="SYMBOLIC-NAME-REFERENCE">
+                          <a:a name="OPTIONAL" value="true"/>
+                          <a:da name="ENABLE" value="false"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>Reference to the DemEventParameter which shall be issued when an error in SW on channel A was detected.</html>
+                            ]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v mclass="Link">VariantLinkTime</icc:v>
+                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="Link">VariantLinkTime</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                          <a:a name="UUID" value="ECUC:00a9b156-a225-479d-bafe-5f962d253e8f"/>
+                          <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                          <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                          <a:a name="SCOPE" value="LOCAL"/>
+                          <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter"/>
+                        </v:ref>
+                        <v:ref name="FRIF_E_SW_CH_B" type="SYMBOLIC-NAME-REFERENCE">
+                          <a:a name="OPTIONAL" value="true"/>
+                          <a:da name="ENABLE" value="false"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>Reference to the DemEventParameter which shall be issued when an error in SW on channel B was detected.</html>
+                            ]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v mclass="Link">VariantLinkTime</icc:v>
+                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="Link">VariantLinkTime</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                          <a:a name="UUID" value="ECUC:f2eead80-964c-4757-8e28-812f37e8ce87"/>
+                          <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                          <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                          <a:a name="SCOPE" value="LOCAL"/>
+                          <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter"/>
+                        </v:ref>
+                      </v:ctr>
+
+                      <v:lst name="FrIfController" type="MAP">
+                        <a:da name="MIN" value="1"/>
+                        <v:ctr name="FrIfController" type="IDENTIFIABLE">
+                          <a:a name="LABEL" value="FrIfController"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>This container contains the configuration of FlexRay CC.</html>
+                            ]]></a:v>
+                          </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                          <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                          <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                          <a:a name="UUID" value="ECUC:656cefb5-7902-47e0-9c33-edab235229ca"/>
+                          <v:var name="FrIfCtrlIdx" type="INTEGER">
+                            <a:a name="LABEL" value="FrIfCtrlIdx"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>This parameter provides a zero-based consecutive index of the FlexRay Communication Controllers. Upper layer BSW modules and the FrIf itself use this index to identify a FlexRay CC.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                            <a:a name="SCOPE" value="ECU"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                            <a:a name="UUID" value="ECUC:5e255c94-18e3-43e5-a7cf-bb9cb7059a5a"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=31"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+                          <v:ref name="FrIfFrCtrlRef" type="SYMBOLIC-NAME-REFERENCE">
+                            <a:a name="LABEL" value="FrIfCtrlref"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>Reference to a Controller, which is handled by a specific Driver. This reference is unique for the ECU.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="UUID" value="ECUC:5b373a9b-6de7-4249-a531-42ae0bfe6617"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="ECU"/>
+                            <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Fr/FrMultipleConfiguration/FrController"/>
+                          </v:ref>
+                          <v:lst name="FrIfFrameTriggering" type="MAP">
+                            <a:da name="MIN" value="1"/>
+                            <v:ctr name="FrIfFrameTriggering" type="IDENTIFIABLE">
+                              <a:a name="LABEL" value="FrIfFrameTriggering"/>
+                              <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>A Frame triggering contains the communication parameters of the FlexRay Frame as well as a reference to the Frame Construction Plan.</html>
+                              ]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v mclass="Link">VariantLinkTime</icc:v>
+                                <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="UUID" value="ECUC:9719ee7a-71cb-45a5-be94-e8b3428e1e5a"/>
+                              <v:var name="FrIfAllowDynamicLSduLength" type="BOOLEAN">
+                                <a:a name="LABEL" value="FrIfAllowDynamicLSduLength"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>Allows LPdu length reduction (&apos;FrIfLSduLength&apos; defines max. length) and indicates that the related CC buffer has to be reconfigured for the actual length and Header-CRC before transmission of the LPdu.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:3f38cb05-1f49-440c-ac94-3de7e38ce608"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="DEFAULT" value="false"/>
+                              </v:var>
+                              <v:var name="FrIfAlwaysTransmit" type="BOOLEAN">
+                                <a:a name="LABEL" value="FrIfAlwaysTransmit"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>Defines wether the driver&apos;s API function Fr_TransmitTxLPdu() shall always be called for this LPdu.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:8aeec494-f0e9-4c41-b8b0-72740507fb88"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="DEFAULT" value="false"/>
+                              </v:var>
+                              <v:var name="FrIfChannel" type="ENUMERATION">
+                                <a:a name="LABEL" value="FrIfChannel"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>This parameter contains the FlexRay Channel used to transmit this FlexRay Frame.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:fbd28ec6-4fd9-4347-8c24-bdb097e6c0ef"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="DEFAULT" value="FRIF_CHANNEL_AB"/>
+                                <a:da name="RANGE">
+                                  <a:v>FRIF_CHANNEL_A</a:v>
+                                  <a:v>FRIF_CHANNEL_AB</a:v>
+                                  <a:v>FRIF_CHANNEL_B</a:v>
+                                </a:da>
+                              </v:var>
+                              <v:var name="FrIfBaseCycle" type="INTEGER">
+                                <a:a name="LABEL" value="FrIfBaseCycle"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>This parameter contains the FlexRay Base Cycle used to transmit this FlexRay Frame.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:1685cb9d-05cb-4a1e-bbf8-89d35744a679"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=63"/>
+                                  <a:tst expr="&gt;=0"/>
+                                </a:da>
+                              </v:var>
+                              <v:var name="FrIfCycleRepetition" type="INTEGER">
+                                <a:a name="LABEL" value="FrIfCycleRepetition"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>This parameter contains the FlexRay Cycle Repetition used to transmit this FlexRay Frame.
+                                    <br>possible Values: 1,2,4,8,16,32,64</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:b4cf6a0a-d8ff-45c4-90ce-9d5d023f5abf"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="DEFAULT" value="1"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=64"/>
+                                  <a:tst expr="&gt;=1"/>
+                                </a:da>
+                              </v:var>
+                              <v:var name="FrIfLSduLength" type="INTEGER">
+                                <a:a name="LABEL" value="FrIf Sdu Length [bytes]"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>The payload length of the Frame is given here. This parameter is required for validation if configured PDUs and update information fits into the Frame at configuration time [bytes].</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:82bb6314-cad3-4291-91d1-b9b96a9000d7"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="DEFAULT" value="32"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=254"/>
+                                  <a:tst expr="&gt;=0"/>
+                                </a:da>
+                              </v:var>
+                              <v:var name="FrIfMessageId" type="INTEGER">
+                                <a:a name="OPTIONAL" value="true"/>
+                                <a:da name="ENABLE" value="false"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>The first two bytes of the payload segment of the FlexRay frame format for frames transmitted in the</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v mclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:a60abbb1-c4c1-4ecd-9f85-e34ee04acb6b"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=65535"/>
+                                  <a:tst expr="&gt;=0"/>
+                                </a:da>
+                              </v:var>
+                              <v:var name="FrIfPayloadPreamble" type="BOOLEAN">
+                                <a:a name="LABEL" value="FrIf Payload Preamble"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>Switching the Payload Preamble bit.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:6e0f874b-6ea4-4e2e-ac03-46657f9f0e6d"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="DEFAULT" value="false"/>
+                                <a:da name="ENABLE" value="true"/>
+                              </v:var>
+                              <v:var name="FrIfSlotId" type="INTEGER">
+                                <a:a name="LABEL" value="FrIf Slot ID"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>This parameter contains the FlexRay Slot ID used to transmit this FlexRay Frame.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:197ef699-1e74-4c1e-bfbd-f86ccf2c091e"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="DEFAULT" value="10"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=2047"/>
+                                  <a:tst expr="&gt;=1"/>
+                                </a:da>
+                              </v:var>
+                              <v:ref name="FrIfFrameStructureRef" type="REFERENCE">
+                                <a:a name="LABEL" value="FrIf Frame Structure Reference"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>Reference to the Construction Plan of the FlexRay Frame.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="UUID" value="ECUC:ef40d158-a637-4c1e-afa4-4edc10f02c1d"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/FrIf/FrIfConfig/FrIfFrameStructure"/>
+                              </v:ref>
+                              <v:ctr name="FrIfFrameTriggeringDemEventParameterRefs" type="IDENTIFIABLE">
+                                <a:a name="OPTIONAL" value="true"/>
+                                <a:da name="ENABLE" value="false"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter&apos;s DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:51b5b218-d6c5-45a2-9178-a0a8c3ec5656"/>
+                                <v:ref name="FRIF_E_LPDU_SLOTSTATUS" type="SYMBOLIC-NAME-REFERENCE">
+                                  <a:a name="OPTIONAL" value="true"/>
+                                  <a:da name="ENABLE" value="false"/>
+                                  <a:a name="DESC">
+                                    <a:v><![CDATA[EN:
+                                      <html>Reference to DEM event Id that is reported when FlexRay driver module detects slot errors. If this parameter is not configured, no event reporting happens.</html>
+                                    ]]></a:v>
+                                  </a:a>
+                                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="Link">VariantLinkTime</icc:v>
+                                    <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                  </a:a>
+                                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                  <a:a name="UUID" value="ECUC:00f0be22-30a8-49c4-a223-2cbea9b48bdf"/>
+                                  <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                  <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                  <a:a name="SCOPE" value="LOCAL"/>
+                                  <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter"/>
+                                </v:ref>
+                              </v:ctr>
+                            </v:ctr>
+                          </v:lst>
+                          <v:lst name="FrIfLPdu" type="MAP">
+                            <a:da name="MIN" value="1"/>
+                            <v:ctr name="FrIfLPdu" type="IDENTIFIABLE">
+                              <a:a name="LABEL" value="FrIf LPdu"/>
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:
+                                  <html>Reference to a LPdu index</html>
+                                ]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v mclass="Link">VariantLinkTime</icc:v>
+                                <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="UUID" value="ECUC:b01c5222-392d-4d28-9da3-81cd74d9cf92"/>
+                              <v:var name="FrIfLPduIdx" type="INTEGER">
+                                <a:a name="LABEL" value="FrIf LPdu Index"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>This parameter identifies the LPdu in the interaction between FlexRay Interface and FlexRay Driver.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                                <a:a name="UUID" value="ECUC:55f481a0-b283-4eb0-a2d0-9e2167fb28b5"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=4095"/>
+                                  <!-- no more LPdus than slots (cSlotIDMax) TBD -->
+                                  <a:tst expr="&gt;=0"/>
+                                </a:da>
+                              </v:var>
+                              <v:var name="FrIfReconfigurable" type="BOOLEAN">
+                                <a:a name="LABEL" value="FrIf LPdu Reconfigurable"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>This parameter specifies that this LPdu is reconfigurable using FrIf_ReconfigLPdu. This means that this LPdu can be assigned to a different FrameTriggering at runtime. However, this reconfiguration is limited by hardware constraints. The direction of the LPdu cannot be reconfigured.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:4fd39b38-ee70-4cbf-b4f7-6cc05dc4391a"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="DEFAULT" value="true"/>
+                              </v:var>
+                              <v:ref name="FrIfVBTriggeringRef" type="REFERENCE">
+                                <a:a name="LABEL" value="FrIf LPdu Triggering Reference"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>Reference to the assigned Frame triggering.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="UUID" value="ECUC:0f029519-bcfe-40f7-92d3-35b18002b7ff"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/FrIf/FrIfConfig/FrIfCluster/FrIfController/FrIfFrameTriggering"/>
+                              </v:ref>
+                            </v:ctr>
+                          </v:lst>
+                          <v:lst name="FrIfTransceiver" type="MAP">
+                            <a:da name="MIN" value="1"/>
+                            <a:da name="MAX" value="2"/>
+                            <v:ctr name="FrIfTransceiver" type="IDENTIFIABLE">
+                              <a:a name="LABEL" value="FrIf Transceiver"/>
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:
+                                  <html>Up to two FlexRay Transceivers may connect a Controller to a Cluster. This container realizes a Controller-Transceiver assignment.</html>
+                                ]]></a:v>
+                              </a:a>
+                              <a:a name="UUID" value="ECUC:b84441bb-1a03-4bdd-90c9-58fd872542e1"/>
+                              <v:var name="FrIfClusterChannel" type="ENUMERATION">
+                                <a:a name="LABEL" value="FrIf Cluster Channel"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>This parameter identifies to which one of the two Channels (A, B, A and B) of the Cluster the Transceiver is connected. FrIfClusterChannel shall map to Fr_ChannelType: FRIF_CHANNEL_A == FR_CHANNEL_A FRIF_CHANNEL_B == FR_CHANNEL_B FR_CHANNEL_AB shall not be used.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:5d27130f-78b6-4ce0-9bcd-986c6b467104"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:da name="DEFAULT" value="FRIF_CHANNEL_A"/>
+                                <a:da name="RANGE">
+                                  <a:v>FRIF_CHANNEL_A</a:v>
+                                  <a:v>FRIF_CHANNEL_B</a:v>
+                                </a:da>
+                              </v:var>
+                              <v:ref name="FrIfFrTrcvChannelRef" type="SYMBOLIC-NAME-REFERENCE">
+                                <a:a name="LABEL" value="FrIf FlexRay Transceiver Channel Reference"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>Reference to a Transceiver Driver Channel. This reference is unique for the ECU.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="UUID" value="ECUC:3b68bb35-9008-4c18-9a4b-2eae1dfc238d"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SCOPE" value="ECU"/>
+                                <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/FrTrcv/FrTrcvChannel"/>
+                              </v:ref>
+                            </v:ctr>
+                          </v:lst>
+                        </v:ctr>
+                      </v:lst>
+                      <v:ctr name="FrIfJobList" type="IDENTIFIABLE">
+                        <a:a name="LABEL" value="FrIf Job List"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>This container specifies a list of all FlexRay Jobs of the Cluster to be performed by FrIf_JobListExec_&lt;ClstIdx&gt;().</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="UUID" value="ECUC:63a0a71d-3e11-4cf1-9f01-f970041b93e1"/>
+                        <v:ref name="FrIfAbsTimerRef" type="SYMBOLIC-NAME-REFERENCE">
+                          <a:a name="LABEL" value="FrIf Absolute Timer Reference"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>Reference to the absolute timer to be used to trigger the interrupt whose ISR contains the FrIf_JobListExec_&lt;ClstIdx&gt;() function.</html>
+                            ]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="Link">VariantLinkTime</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                          <a:a name="UUID" value="ECUC:f5472f38-8ece-499b-8098-2136ef90b36b"/>
+                          <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                          <a:a name="SCOPE" value="LOCAL"/>
+                          <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Fr/FrMultipleConfiguration/FrController/FrAbsoluteTimer"/>
+                        </v:ref>
+                        <v:lst name="FrIfJob" type="MAP">
+                          <a:da name="MIN" value="1"/>
+                          <v:ctr name="FrIfJob" type="IDENTIFIABLE">
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v mclass="Link">VariantLinkTime</icc:v>
+                              <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="FrIf Job"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>A job may contain more than one operation that are executed at a specific point in time.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:423a5daf-8d2a-41f5-a202-070406616609"/>
+                            <v:var name="FrIfCycle" type="INTEGER">
+                              <a:a name="LABEL" value="FrIf Cycle"/>
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:
+                                  <html>The FlexRay Cycle in which the communication operation will execute this job</html>
+                                ]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                              <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                              <a:a name="UUID" value="ECUC:01808781-d9bc-4464-8e7e-959e60ccc8ab"/>
+                              <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                              <a:a name="SCOPE" value="LOCAL"/>
+                              <a:da name="DEFAULT" value="0"/>
+                              <a:da name="INVALID" type="Range">
+                                <a:tst expr="&lt;=63"/>
+                                <a:tst expr="&gt;=0"/>
+                              </a:da>
+                            </v:var>
+                            <v:var name="FrIfMacrotick" type="INTEGER">
+                              <a:a name="LABEL" value="FrIf Macrotick [Macrotick]"/>
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:
+                                  <html>Macrotick offset in the Cycle [Macrotick]</html>
+                                ]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                              <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                              <a:a name="UUID" value="ECUC:04fc6428-deb8-46e7-bae6-b79c508fcd12"/>
+                              <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                              <a:a name="SCOPE" value="LOCAL"/>
+                              <a:da name="DEFAULT" value="0"/>
+                              <a:da name="INVALID" type="Range">
+                                <a:tst expr="&lt;=10240000"/>
+                                <a:tst expr="&gt;=0"/>
+                              </a:da>
+                            </v:var>
+                            <v:lst name="FrIfCommunicationOperation" type="MAP">
+                              <a:da name="MIN" value="1"/>
+                              <v:ctr name="FrIfCommunicationOperation" type="IDENTIFIABLE">
+                                <a:a name="LABEL" value="FrIf Communication Operation"/>
+                                <a:a name="DESC">
+                                  <a:v><![CDATA[EN:
+                                    <html>A separate operation which is part of a FlexRay Job and defines what type of action is executed.</html>
+                                  ]]></a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v mclass="Link">VariantLinkTime</icc:v>
+                                  <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                  <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:0f05cd0c-c46d-4eb5-93e5-f1435260995c"/>
+                                <v:var name="FrIfCommunicationAction" type="ENUMERATION">
+                                  <a:a name="LABEL" value="FrIf Communication Action"/>
+                                  <a:a name="DESC">
+                                    <a:v><![CDATA[EN:
+                                      <html>The action to be performed in the FlexRay Operation</html>
+                                    ]]></a:v>
+                                  </a:a>
+                                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                  </a:a>
+                                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                  <a:a name="UUID" value="ECUC:ba11fe57-083b-4704-91c1-1c5eb835bab0"/>
+                                  <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                  <a:a name="SCOPE" value="LOCAL"/>
+                                  <a:da name="DEFAULT" value="DECOUPLED_TRANSMISSION"/>
+                                  <a:da name="RANGE">
+                                    <a:v>DECOUPLED_TRANSMISSION</a:v>
+                                    <a:v>FREE_OP_A</a:v>
+                                    <a:v>FREE_OP_B</a:v>
+                                    <a:v>PREPARE_LPDU</a:v>
+                                    <a:v>RECEIVE_AND_INDICATE</a:v>
+                                    <a:v>RECEIVE_AND_STORE</a:v>
+                                    <a:v>RX_INDICATION</a:v>
+                                    <a:v>TX_CONFIRMATION</a:v>
+                                  </a:da>
+                                </v:var>
+                                <v:var name="FrIfCommunicationOperationIdx" type="INTEGER">
+                                  <a:a name="LABEL" value="FrIf Communication Operation Index"/>
+                                  <a:a name="DESC">
+                                    <a:v><![CDATA[EN:
+                                      <html>For each FlexRay Communication Job, this index spans a range of zero-based consecutive values and thus defines the order of the FlexRay Communication Operation in the respective FlexRay Communication Job.</html>
+                                    ]]></a:v>
+                                  </a:a>
+                                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                  </a:a>
+                                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                  <a:a name="UUID" value="ECUC:b1489a95-8085-407d-a397-303cb21d9b8d"/>
+                                  <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                  <a:a name="SCOPE" value="LOCAL"/>
+                                  <a:da name="DEFAULT" value="0"/>
+                                  <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=255"/>
+                                    <a:tst expr="&gt;=0"/>
+                                  </a:da>
+                                </v:var>
+                                <v:var name="FrIfRxComOpMaxLoop" type="INTEGER">
+                                  <a:a name="OPTIONAL" value="true"/>
+                                  <a:a name="LABEL" value="FrIfRxComOpMaxLoop"/>
+                                  <a:a name="DESC">
+                                    <a:v><![CDATA[EN:
+                                      <html>Defines the maximum number of loops for the receive RECEIVE_AND_INDICATE (Use case: emptying a FIFO).</html>
+                                    ]]></a:v>
+                                  </a:a>
+                                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="Link">VariantLinkTime</icc:v>
+                                    <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                  </a:a>
+                                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                  <a:a name="UUID" value="ECUC:529aa779-b694-4612-a835-303afae25e9b"/>
+                                  <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                  <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                  <a:a name="SCOPE" value="LOCAL"/>
+                                  <a:da name="DEFAULT" value="128"/>
+                                  <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=512"/>
+                                    <a:tst expr="&gt;=1"/>
+                                  </a:da>
+                                </v:var>
+                                <v:ref name="FrIfLPduIdxRef" type="REFERENCE">
+                                  <a:a name="LABEL" value="FrIf LPdu Index Reference"/>
+                                  <a:a name="DESC">
+                                    <a:v><![CDATA[EN:
+                                      <html>Reference to a LPdu index</html>
+                                    ]]></a:v>
+                                  </a:a>
+                                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                  </a:a>
+                                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                  <a:a name="UUID" value="ECUC:3edd8726-d58b-4d51-ac6a-0e26b1a9e072"/>
+                                  <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                  <a:a name="SCOPE" value="LOCAL"/>
+                                  <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/FrIf/FrIfConfig/FrIfCluster/FrIfController/FrIfLPdu"/>
+                                </v:ref>
+                              </v:ctr>
+                            </v:lst>
+                          </v:ctr>
+                        </v:lst>
+                      </v:ctr>
+                    </v:ctr>
+                  </v:lst>
+                  <v:lst name="FrIfFrameStructure" type="MAP">
+                    <a:da name="MIN" value="1"/>
+                    <v:ctr name="FrIfFrameStructure" type="IDENTIFIABLE">
+                      <a:a name="LABEL" value="FrIf Frame Structure"/>
+                      <a:a name="DESC">
+                        <a:v><![CDATA[EN:
+                          <html>The Frame structure specifies a Construction Plan how a Frame is assembled with PDUs and their respective Update-Bits.</html>
+                        ]]></a:v>
+                      </a:a>
+                      <a:a name="UUID" value="ECUC:735abfcc-8a55-48ae-83db-482e057c9070"/>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v mclass="Link">VariantLinkTime</icc:v>
+                        <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <v:var name="FrIfByteOrder" type="ENUMERATION">
+                        <a:a name="LABEL" value="FrIfByteOrder"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>This parameter defines the ByteOrder of all Pdus that are mapped into the Frame.</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v vclass="Link">VariantLinkTime</icc:v>
+                          <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:57f5dedf-fcd0-4e27-9d19-c06b4dcf344b"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:da name="DEFAULT" value="BIG_ENDIAN"/>
+                        <a:da name="RANGE">
+                          <a:v>BIG_ENDIAN</a:v>
+                          <a:v>LITTLE_ENDIAN</a:v>
+                        </a:da>
+                      </v:var>
+                      <v:lst name="FrIfPdusInFrame" type="MAP">
+                        <a:da name="MIN" value="1"/>
+                        <v:ctr name="FrIfPdusInFrame" type="IDENTIFIABLE">
+                          <a:a name="LABEL" value="FrIf Pdus In Frame"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>This container holds all the information about a PDU in a FlexRay Frame.</html>
+                            ]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v mclass="Link">VariantLinkTime</icc:v>
+                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="UUID" value="ECUC:4748018d-8188-4255-bb88-d7196eb789f2"/>
+                          <v:var name="FrIfPduOffset" type="INTEGER">
+                            <a:a name="LABEL" value="FrIf Pdu Offset [bytes]"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>The value specifies the offset of the PDU within the Frame [bytes].</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:7a4d09f3-0715-43c3-9bc1-2b43fb79bb8a"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="LOCAL"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=253"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+                          <v:var name="FrIfPduUpdateBitOffset" type="INTEGER">
+                            <a:a name="OPTIONAL" value="true"/>
+                            <a:da name="ENABLE" value="false"/>
+                            <a:a name="LABEL" value="FrIf Pdu Update Bit Offset" />
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>This value specifies where the PDU&apos;s Update-Bit is stored in the Frame (bit location of PDU&apos;s Update-Bit in the FlexRay Frame).</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v mclass="Link">VariantLinkTime</icc:v>
+                              <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:cf0eb570-0770-4b37-8bf1-831c5d4423e5"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                            <a:a name="SCOPE" value="LOCAL"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=2031"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+                          <v:ref name="FrIfPduRef" type="REFERENCE">
+                            <a:a name="LABEL" value="FrIf Pdu Reference"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>This is the reference to the local definition of a PDU.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="UUID" value="ECUC:caf81484-2625-4462-b28c-6c0292002094"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="LOCAL"/>
+                            <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/FrIf/FrIfConfig/FrIfPdu"/>
+                          </v:ref>
+                        </v:ctr>
+                      </v:lst>
+                    </v:ctr>
+                  </v:lst>
+                  <v:lst name="FrIfPdu" type="MAP">
+                    <a:da name="MIN" value="1"/>
+                    <v:ctr name="FrIfPdu" type="IDENTIFIABLE">
+                      <a:a name="LABEL" value="FrIf Pdu"/>
+                      <a:a name="DESC">
+                        <a:v><![CDATA[EN:
+                          <html>Contains PDU information. A PDU may be either a transmission PDU or a reception PDU.</html>
+                        ]]></a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v mclass="Link">VariantLinkTime</icc:v>
+                        <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="UUID" value="ECUC:266b2d22-ec46-4cbe-a005-5254adb95aa0"/>
+                      <v:chc name="FrIfPduDirection" type="IDENTIFIABLE">
+                        <a:a name="LABEL" value="FrIf Pdu Direction"/>
+                        <a:a name="DESC">
+                          <a:v><![CDATA[EN:
+                            <html>A PDU is either transmit or receive</html>
+                          ]]></a:v>
+                        </a:a>
+                        <a:a name="UUID" value="ECUC:d3a34407-2f64-432b-892a-94e4e77125d7"/>
+                        <v:ctr name="FrIfRxPdu" type="IDENTIFIABLE">
+                          <a:a name="LABEL" value="FrIf Receive Pdu"/>
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>Receive PDU</html>
+                            ]]></a:v>
+                          </a:a>
+                          <a:a name="UUID" value="ECUC:633cc79e-ab12-4048-bd7b-192640a01575"/>
+                          <v:var name="FrIfRxIndicationName" type="FUNCTION-NAME">
+                            <a:a name="OPTIONAL" value="true"/>
+                            <a:da name="ENABLE" value="false"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>This parameter defines the name of the &lt;User_RxIndication&gt;. This parameter depends on the parameter FRIF_USERRXINDICATION_UL. If FRIF_USERRXINDICATION_UL equals FR_TP, FR_NM, PDUR or XCP, the name of the &lt;User_RxIndication&gt; is fixed. If FRIF_USERRXINDICATION_UL equals CDD, the name of the &lt;User_RxIndication&gt; is selectable.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v mclass="Link">VariantLinkTime</icc:v>
+                              <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:a4696a8a-dc46-427e-93bd-e7c4ba023dad"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                            <a:a name="SCOPE" value="ECU"/>
+                          </v:var>
+                          <v:var name="FrIfUserRxIndicationUL" type="ENUMERATION">
+                            <a:a name="LABEL" value="FrIfUserRxIndicationUL" />
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>This parameter defines the upper layer (UL) module to which the indication of the successfully received FRIFRXPDU has to be routed via &lt;User_RxIndication&gt;. This &lt;User_RxIndication&gt; has to be invoked when the indication of the configured FRIFRXPDU will be received by a Rx indication event from the FR Driver module. If no upper layer (UL) module is configured, no &lt;User_RxIndication&gt; has to be called in case of a Rx indication event of the FRIFRXPDU from the FR Driver module.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:25418bd7-3b49-441f-ab1e-434b5bf64e31"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="ECU"/>
+                            <a:da name="DEFAULT" value="PDUR"/>
+                            <a:da name="RANGE">
+                              <a:v>CDD</a:v>
+                              <a:v>FR_AR_TP</a:v>
+                              <a:v>FR_NM</a:v>
+                              <a:v>FR_TP</a:v>
+                              <a:v>PDUR</a:v>
+                              <a:v>XCP</a:v>
+                            </a:da>
+                          </v:var>
+                          <v:ref name="FrIfRxPduRef" type="REFERENCE">
+                            <a:a name="LABEL" value="FrIf Rx Pdu Reference" />
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>Reference to the external PDU definition.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="UUID" value="ECUC:0384ce0d-061c-4c16-9521-b092ca2d56f8"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="ECU"/>
+                            <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu"/>
+                          </v:ref>
+                        </v:ctr>
+                        <v:ctr name="FrIfTxPdu" type="IDENTIFIABLE">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:
+                              <html>This container specifies transmission PDUs.</html>
+                            ]]></a:v>
+                          </a:a>
+                          <a:a name="UUID" value="ECUC:a39da853-7001-4f37-b269-629e0856f500"/>
+                          <v:var name="FrIfConfirm" type="BOOLEAN">
+                            <a:a name="LABEL" value="FrId Confirm"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>Defines whether the transmission of a PDU should be checked and confirmed to the PDU owning BSW module.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:6f8d43c7-dade-4705-95f2-e69dc37342c6"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="LOCAL"/>
+                            <a:da name="DEFAULT" value="false"/>
+                          </v:var>
+                          <v:var name="FrIfCounterLimit" type="INTEGER">
+                            <a:a name="LABEL" value="FrIf Counter Limit"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>This value states the maximum number of indication of ready PDU data to the FrIf (i.e. maximum number of invocations of FrIf_Transmit) without an intermediate transmission of the PDU.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:8f1a1aba-109d-47be-b45e-d9f382c8c4d9"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="LOCAL"/>
+                            <a:da name="DEFAULT" value="1"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=255"/>
+                              <a:tst expr="&gt;=1"/>
+                            </a:da>
+                          </v:var>
+                          <v:var name="FrIfImmediate" type="BOOLEAN">
+                            <a:a name="LABEL" value="FrIf Immediate"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>Defines whether the PDU is transmitted immediate or decoupled.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:19b34f78-5d6f-4f1b-bf02-dc0e4f4c66e6"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="LOCAL"/>
+                            <a:da name="DEFAULT" value="false"/>
+                          </v:var>
+                          <v:var name="FrIfNoneMode" type="BOOLEAN">
+                            <a:a name="OPTIONAL" value="true"/>
+                            <a:da name="ENABLE" value="true"/>
+                            <a:a name="LABEL" value="FrIf None-Mode"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>Using the &quot;None-Mode&quot; which means that there is no API FrIf_Transmit call of the upper layer for this PDU.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v mclass="Link">VariantLinkTime</icc:v>
+                              <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:da name="DEFAULT" value="false"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                            <a:a name="SCOPE" value="LOCAL"/>
+                            <a:a name="UUID" value="ECUC:f481cd2e-6ab0-408b-afb4-f7b84ac69f9a"/>
+                          </v:var>
+                          <v:var name="FrIfTxConfirmationName" type="FUNCTION-NAME">
+                            <a:a name="OPTIONAL" value="true"/>
+                            <a:da name="ENABLE" value="false"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>This parameter defines the name of the &lt;User_TxConfirmation&gt;. This parameter depends on the parameter FrIfUserTxUL. If FrIfUserTxUL equals FR_TP, FR_NM, PDUR or XCP, the name of the &lt;User_TxConfirmation&gt; is fixed. If FrIfUserTxUL equals CDD, the name of the &lt;User_TxConfirmation&gt; is selectable.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v mclass="Link">VariantLinkTime</icc:v>
+                              <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:c94647f0-cdb1-4d3b-91b2-6a5a0fc9628c"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="ECU"/>
+                            <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                          </v:var>
+                          <v:var name="FrIfTxPduId" type="INTEGER">
+                            <a:a name="LABEL" value="FrIf Transmit Pdu ID"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>The global PDU identifier, which has to be used by the upper layer BSW module. The identifier has to be zero based and consecutive.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                            <a:a name="SCOPE" value="ECU"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                            <a:a name="UUID" value="ECUC:7063d9f8-d07f-4686-aecf-eaaeef717041"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=65535"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+                          <v:var name="FrIfUserTriggerTransmitName" type="FUNCTION-NAME">
+                            <a:a name="OPTIONAL" value="true"/>
+                            <a:da name="ENABLE" value="false"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>This parameter defines the name of the &lt;User_TriggerTransmit&gt;. This parameter depends on the parameter FrIfUserTxUL. If FrIfUserTxUL equals FR_TP, FR_NM, PDUR or XCP, the name of the &lt;User_TriggerTransmit&gt; is fixed. If FrIfUserTxUL equals CDD, the name of the &lt;User_TriggerTransmit&gt; is selectable.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v mclass="Link">VariantLinkTime</icc:v>
+                              <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:e61fe2bf-6ab8-4887-bb62-0f8291195f11"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="ECU"/>
+                            <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                          </v:var>
+                          <v:var name="FrIfUserTxUL" type="ENUMERATION">
+                              <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>This parameter defines the upper layer (UL) module to which the trigger of the to be transmitted FRIFTXPDUID (via the &lt;User_TriggerTransmit&gt;) or the confirmation of the successfully transmitted FRIFTXPDUID has to be routed (via the &lt;User_TxConfirmation&gt;).</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:98f52c06-21b8-4c91-9523-659149f8b503"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="ECU"/>
+                            <a:da name="DEFAULT" value="CDD"/>
+                            <a:da name="RANGE">
+                              <a:v>CDD</a:v>
+                              <a:v>FR_NM</a:v>
+                              <a:v>FR_AR_TP</a:v>                      
+                              <a:v>FR_TSYN</a:v>
+                              <a:v>FR_TP</a:v>
+                              <a:v>PDUR</a:v>
+                              <a:v>XCP</a:v>
+                            </a:da>
+                          </v:var>
+                          <v:ref name="FrIfTxPduRef" type="REFERENCE">
+                            <a:a name="LABEL" value="FrIf Pdu Reference"/>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                <html>Reference to the external PDU definition.</html>
+                              ]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="Link">VariantLinkTime</icc:v>
+                              <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="UUID" value="ECUC:977ec930-f15f-404f-8b1c-f08dbac13ad9"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                            <a:a name="SCOPE" value="ECU"/>
+                            <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu"/>
+                          </v:ref>
+                        </v:ctr>
+                      </v:chc>
+                    </v:ctr>
+                  </v:lst>
+                </v:ctr>
+              <v:ctr name="FrIfGeneral" type="IDENTIFIABLE">
+                <a:a name="LABEL" value="FrIf General"/>
+                <a:a name="DESC">
+                  <a:v><![CDATA[EN:
+                    <html>This container contains the general configuration parameters of the FlexRay Interface.</html>
+                  ]]></a:v>
+                </a:a>
+                <a:a name="UUID" value="ECUC:27b62e83-3344-4cd8-af7c-e385315c9cd2"/>
+                <v:var name="FrIfAbsTimerIdx" type="INTEGER">
+                  <a:a name="LABEL" value="FrIfAbsTimerIdx"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Maximum number of supported absolut timers.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="LOCAL"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:86c6acb2-33cb-435a-9794-c00a6032f880"/>
+                  <a:da name="DEFAULT" value="0"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&lt;=2"/>
+                    <!-- there are only two timers available on the HW -->
+                    <a:tst expr="&gt;=1"/>
+                  </a:da>
+                </v:var>
+                <v:var name="FrIfAllSlotsSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfAllSlotsSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to enable/disable of switching from key-slot / single-slot mode to all slot mode.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:adaaed7c-94c3-422f-a125-b62b1fdb2239"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfCancelTransmitSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfCancelTransmitSupport"/>            
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to request the cancellation of the LPdu transmission to FrDrv.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:837538a3-0456-4438-af6c-f6a440a9a925"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfDevErrorDetect" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIf Development Error Detection"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Switches the Development Error Detection and Notification on or off
+                          <ul>
+                            <li>true: Development Error Detection and Notification on
+                            <li>false: Development Error Detection and Notification off
+                          </ul>
+                      </html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:676c86ce-d5a1-4568-8891-0e92a92e8e29"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfDisableLPduSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfDisableLPduSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to disables the hardware resource of a LPdu for transmission/reception.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="LOCAL"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:c325070a-105d-4bdd-8eb6-82dd58e7b93b"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfDisableTransceiverBranchSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfDisableTransceiverBranchSupport"/>                 
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to disable branches of an active star.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:51ece56c-8b34-4a7e-84fb-ba8101ed043c"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+                <v:var name="FrIfEnableTransceiverBranchSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfEnableTransceiverBranchSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to enable branches of an active star.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:46a664ba-3e8c-48a0-a939-dcb2c46ad2cf"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+                <v:var name="FrIfFreeOpAApiName" type="STRING">
+                  <a:a name="DESC" 
+                       value="EN: API name that is called when FREE_OP_A is selected as communication operation. See also chapter 8.8.3 Configurable Interfaces."/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="OPTIONAL" value="true"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" 
+                       value="ECUC:281ddf2a-84b4-4948-93ef-4215bdb225f9"/>
+                  <a:da name="ENABLE" value="false"/>
+                </v:var>
+                <v:var name="FrIfFreeOpBApiName" type="STRING">
+                  <a:a name="DESC" 
+                       value="EN: API name that is called when FREE_OP_B is selected as communication operation. See also chapter 8.8.3 Configurable Interfaces."/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="OPTIONAL" value="true"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" 
+                       value="ECUC:ca8662de-f342-4d06-9c4e-51643751cf40"/>
+                  <a:da name="ENABLE" value="false"/>
+                </v:var>
+                <v:var name="FrIfFreeOpsHeader" type="STRING">
+                  <a:a name="DESC" 
+                       value="EN: Defines header file for configurable FREE_OP_A / FREE_OP_B functions."/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="OPTIONAL" value="true"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="LOCAL"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" 
+                       value="ECUC:56f153db-3aeb-435f-9d3f-653f33925408"/>
+                  <a:da name="ENABLE" value="false"/>
+                </v:var>
+                <v:var name="FrIfGetClockCorrectionSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfGetClockCorrectionSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to enable/disable of polling the FlexRay Driver to getting CC clock correction values.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:a3536f1a-a026-4e32-b15e-a756fe17a0a7"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfGetGetChannelStatusSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfGetGetChannelStatusSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to enable/disable of polling the FlexRay Driver to getting error information about the FlexRay communications bus.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:555f5628-fd92-42ed-804a-639f5d79fbf5"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfGetNmVectorSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfGetNmVectorSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to request the FlexRay hardware NMVector.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:0c426755-9e16-4952-b8b7-5d0a5a8d5bb8"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfGetNumOfStartupFramesSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfGetNumOfStartupFramesSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to enable/disable of polling the FlexRay Driver for the actual number of received startup frames on the bus.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:60eacfdf-6b9b-4b58-837f-d5aa9cc6d1af"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfGetSyncFrameListSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfGetSyncFrameListSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to enable/disable of polling the FlexRay Driver to getting a list of actual received sync frames.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:88dd0b56-b740-48bb-bfba-484e301a2069"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfGetTransceiverErrorSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfGetTransceiverErrorSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to get the FlexRay Transceiver errors by calling the FlexRay Transceiver module.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:0d6dd39d-4161-42df-9cd4-70a9af32d52e"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+                <v:var name="FrIfGetWakeupRxStatusSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfGetWakeupRxStatusSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to get the wakeup received information from the FlexRay controller.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:f7e1f8a3-5a19-4472-beff-1a12cbe3cf6a"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfNumClstSupported" type="INTEGER">
+                  <a:a name="LABEL" value="FrIf Number Of Supported Clusters"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Maximum number of FlexRay Clusters that the FlexRay Interface supports.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="LOCAL"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:35f6fba8-ba0a-46d9-ace6-ff1a0a455fa2"/>
+                  <a:da name="DEFAULT" value="1"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&lt;=15"/>
+                    <a:tst expr="&gt;=1"/>
+                  </a:da>
+                </v:var>
+                <v:var name="FrIfNumCtrlSupported" type="INTEGER">
+                  <a:a name="LABEL" value="FrIf Number Of Supported Controllers"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Maximum number of FlexRay CCs that the FlexRay Interface supports</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="LOCAL"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:7e49a950-7a5e-4ff4-aac9-2f2c63f6bd74"/>
+                  <a:da name="DEFAULT" value="1"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&lt;=15"/>
+                    <a:tst expr="&gt;=1"/>
+                  </a:da>
+                </v:var>
+                <v:lst name="FrIfPublicCddHeaderFile">
+                  <v:var name="FrIfPublicCddHeaderFile" type="STRING">
+                    <a:a name="DESC">
+                      <a:v><![CDATA[EN:
+                        <html>Defines header files for callback functions which shall be included in case of CDDs.</html>
+                      ]]></a:v>
+                    </a:a>
+                    <a:a name="WIDTH" value="32"/>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                      <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                      <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                      <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                      <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                      <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                      <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                    <a:a name="SCOPE" value="LOCAL"/>
+                    <a:a name="UUID" value="ECUC:26c1bfb3-1a57-4a45-85d9-64c9aa087618"/>
+                  </v:var>
+                </v:lst>
+                <v:var name="FrIfReadCCConfigApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable the optional FrIf_ReadCCConfig API.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:d2b1bb79-c20c-4562-aaea-bbeb1e1ba531"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfReconfigLPduSupport" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIfReconfigLPduSupport"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Configuration parameter to enable/disable FrIf support to enable/disable the reconfiguration of a given LPdu according to the parameters (FrameId, Channel, CycleRepetition, CycleOffset, PayloadLength, HeaderCRC) at runtime.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:f041b671-21e5-4c8f-a02a-ffe33f9473d7"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                <v:var name="FrIfUnusedBitValue" type="INTEGER">
+                  <a:a name="OPTIONAL" value="true"/>
+                  <a:da name="ENABLE" value="false"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Set unused bits to a defined value.</html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="LOCAL"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:0d785432-c3c8-41f4-be63-a49199b18f1d"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&lt;=1"/>
+                    <a:tst expr="&gt;=0"/>
+                  </a:da>
+                </v:var>
+                <v:var name="FrIfVersionInfoApi" type="BOOLEAN">
+                  <a:a name="LABEL" value="FrIf Version API Enable"/>
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                      <html>Enables/disables the existence of the FrIf_GetVersionInfo() API service
+                        <ul>
+                          <li>true: FrIf_GetVersionInfo() API service exists
+                          <li>false: FrIf_GetVersionInfo() API service does not exist
+                        </ul>
+                      </html>
+                    ]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                  <a:a name="SCOPE" value="LOCAL"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:5cdc7475-e3d6-44d0-b77c-8bd072fbc3d9"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+              </v:ctr>
+            </v:ctr>
+          </d:chc>
+          <d:chc name="FrIf_EcuParameterDefinition" type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+            <d:ctr type="AR-ELEMENT">
+              <a:a name="UUID" value="ECUC:ddab7d31-694d-4020-80e0-fbec364d405d"/>
+              <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+              <d:lst name="MODULE_REF">
+                <d:ref type="MODULE_REF" value="ASPath:/TS_T2D35M10I0R0/FrIf"/>
+              </d:lst>
+            </d:ctr>
+          </d:chc>
+          <d:chc name="FrIf_ModuleDescription" type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+            <d:ctr type="AR-ELEMENT">
+              <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+              <d:var name="MODULE_ID" type="INTEGER" >
+                <a:a name="ENABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:var>
+              <d:ref type="RECOMMENDED_CONFIGURATION" >
+                <a:a name="ENABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:ref>
+              <d:ref type="PRE_CONFIGURED_CONF" >
+                <a:a name="ENABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:ref>
+              <d:ref type="VENDOR_SPECIFIC_MODULE_DEF" value="ASPath:/TS_T2D35M10I0R0/FrIf"/>
+            </d:ctr>
+          </d:chc>
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

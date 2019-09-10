@@ -1,0 +1,15 @@
+
+Name: config/Base.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377420813568394058094620889094014593404773188900260383
+ 3297891764070496347819306725980399829587220910660955
+
+Name: generate_PC/include/modules.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377425243764830306420888872669161144464010353921310623
+ 3213982799986647424461370469250910986521596402015263
+
